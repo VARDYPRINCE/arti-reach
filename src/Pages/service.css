@@ -1,0 +1,47 @@
+.pad_2 {
+  padding: 0px 150px;
+  margin-top: 70px;
+}
+.about {
+  margin-top: 50px;
+  text-decoration: underline;
+  color: #a09107;
+  font-size: 24px;
+  line-height: 28.05px;
+  font-weight: 600;
+  font-family: "open sans";
+}
+.text_2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58.09px;
+  margin-top: 30px;
+  font-family: "open sans";
+}
+.text_3 {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  font-family: "lato";
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+}
+.ptn_btn1 {
+  margin-top: 50px;
+  text-align: center;
+}
+.btn_4 {
+  width: 160px;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  background-color: #08457e;
+  color: white;
+}

@@ -1,0 +1,26 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f8ff;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: #08457e;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #004080;
+}
+
+a:visited {
+  color: #551a8b;
+}

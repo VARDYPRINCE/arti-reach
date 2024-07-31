@@ -1,0 +1,156 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: 30px;
+  width: 396px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "lato";  
+}
+.sub {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "lato";
+}
+.sub_1 {
+  padding: 10px 15px;
+  color: #cca20e;
+  background-color: #f3f1e5;
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.btn_1 {
+  width: 145px;
+  height: 48px;
+  border-radius: 10px;
+  padding: 52px, 30px, 52px, 30px;
+  background-color: #08457e;
+
+  color: #e8e8e8;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  margin-right: 30px;
+}
+.btn-1 {
+  width: 145px;
+  height: 48px;
+  border-radius: 10px;
+  padding: 52px, 30px, 52px, 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0e5acc;
+  border: 1px solid #0e5acc;
+  background-color: #ffffff1a;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+}
+.header {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 78px;
+  font-family: "open sans";
+}
+.paragraph {
+  margin-top: 20px;
+  /* border: 1px solid red; */
+  width: 501px;
+  height: 291px;
+  align-content: center;
+}
+.artisan {
+  color: #08457e;
+}
+.statement {
+  width: 468px;
+  height: 120px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+  font-family: "lato";
+}
+.photo {
+  border-radius: 15px;
+  padding-right: 20px;
+  width: 600px;
+}
+.btn_2 {
+  width: 160px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #08457e;
+
+  color: #e8e8e8;
+  border: none;
+}
+.btn_3 {
+  width: 160px;
+  height: 56px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #ffffff1a;
+  border: 1.35px solid #366a8f;
+  color: #0e5acc;
+}
+.button {
+  margin-top: 20px;
+}
+button:hover {
+  cursor: pointer;
+}
+.view {
+  background-color: #fafafa;
+  padding: 0px 150px;
+  margin-top: 50px;
+}
+.companies {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 63px;
+  font-family: "open sans";
+}
+.sponsors {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tenece {
+  width: 200px;
+  margin-top: 43px;
+}
+.mini_img {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+}
+.imgs {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+}
+.mini {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
