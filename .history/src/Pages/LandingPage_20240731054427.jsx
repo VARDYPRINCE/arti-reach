@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../assets/images/arti-reach logo.png";
 import landingpicture from "../assets/images/portrait-man-working-as-engineer_23-2151229979 (1) 1.png";
 import gensys from "../assets/images/genesys_main-removebg-preview 1.png";
@@ -25,10 +26,10 @@ const LandingPage = () => {
           <a href="#contactUs">Contacts</a>
         </div>
         <div className="button">
-          <Link to="/register">
-            <button className="btn_1">Sign Up</button>
+          <Link to="/">
+            <button className="btn_1">Sign In</button>
           </Link>
-          <Link to="/login">
+          <Link to="/">
             <button className="btn-1">Log In</button>
           </Link>
         </div>
