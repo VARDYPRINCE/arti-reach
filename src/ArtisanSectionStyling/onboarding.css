@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .onboarding-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two equal columns */
+    gap: 0; /* No gap between grid items */
+    background-color: rgb(241, 241, 241);
+    font-family: "Lato", sans-serif;
+  }
+  .Ttext {
+    font-family: "Lato", sans-serif;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .form {
+    padding-top: 30px;
+    padding-left: 100px;
+  }
+  
+  .O_logo {
+    width: 300px;
+    padding-bottom: 20px;
+  }
+  
+  .all {
+    margin-bottom: 15px;
+  }
+  
+  .all label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .all input {
+    width: 90%;
+    padding: 8px;
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .select1 {
+    width: 90%;
+    padding: 8px;
+    height: 60px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select:focus {
+    outline: none; /* Removes the default outline for focus state */
+    box-shadow: none;
+  }
+  
+  .select-a {
+    width: 100%;
+    padding-bottom: 5px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-buttoN {
+    background-color: #1056a0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: large;
+    width: 90%;
+  }
+  
+  .next-button {
+    width: 90%;
+    height: 50px;
+    border: 2px solid #1056a0;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1056a0;
+  }
+  .next-button a {
+    text-decoration: none;
+    color: #1056a0;
+  }
+  
+  .onboarding_image_container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 0 0 5px;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    margin-top: 230px;
+  }
+  
+  .imgA {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .imgB {
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+  }

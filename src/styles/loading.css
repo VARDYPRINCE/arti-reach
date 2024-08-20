@@ -1,0 +1,34 @@
+/* Loader styling */
+.loaderSt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    text-align: center;
+    font-size: 16px; /* Adjust font size as needed */
+    color: #555; /* Adjust color as needed */
+  }
+  
+  .loaderSt p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Spinner animation */
+  .loaderSt::before {
+    content: '';
+    display: inline-block;
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    border: 3px solid #f3f3f3; /* Light grey color */
+    border-top: 3px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

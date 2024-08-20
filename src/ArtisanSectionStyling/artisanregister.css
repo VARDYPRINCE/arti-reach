@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .main_container {
+    display: grid;
+    grid-template-columns: 50% 60%; /* Two equal columns */
+    height: 100vh; /* Full viewport height */
+    gap: 0; /* No gap between grid items */
+    background-color: white;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .image_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #023974c4;
+    height: 863px;
+    border-radius: 5px 0 0 5px;
+    /* position: absolute; */
+  }
+  
+  .img11 {
+    width: 300px;
+    height: 300px;
+    padding-top: 50px;
+    margin-left: 100px;
+  }
+  
+  .img22 {
+    width: 100px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 150px;
+  }
+  
+  .img33 {
+    width: 200px;
+    height: 200px;
+    /* padding-bottom: 50px; */
+    margin-left: 250px;
+    /* top: 20%; */
+    /* border: 1px solid red; */
+  }
+  
+  .register-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 5px 5px 0;
+    padding: 40px;
+  }
+  
+  .logo {
+    width: 300px;
+    padding-bottom: 40px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 75%;
+    padding: 8px;
+    height: 55px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 250px; /* Adjust according to your needs */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black; /* Adjust color if needed */
+  }
+  
+  .eye-icon svg {
+    font-size: 20px; /* Adjust size according to your design */
+  }
+  
+  .form-group input.error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .tick-box {
+    /* margin-right: 5px; */
+    /* vertical-align: text-top; */
+    /* padding-top: 20px; */
+    width: 700px;
+    font-size: 15px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tick-box a {
+    text-decoration: none;
+  }
+  
+  .tick-box-link:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-button {
+    background-color: #1056a0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: large;
+    width: 75%;
+  }
+  
+  .submit-button:hover {
+    background-color: #023974c4;
+  }
+  
+  .success-message {
+    color: green;
+    margin-bottom: 15px;
+  }
+  
+  .register-footer {
+    margin-top: 1rem;
+  }
+  
+  .register a {
+    color: #007bfff1;
+    text-decoration: none;
+  }
+  
+  .register a :hover {
+    text-decoration: underline;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-link a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  .register-link {
+    color: #007bff;
+  }

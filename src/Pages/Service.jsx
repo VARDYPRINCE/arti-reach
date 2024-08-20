@@ -9,22 +9,24 @@ import culinary from "../assets/images/Frame 511.png";
 import painter from "../assets/images/Frame 512.png";
 import cleaner from "../assets/images/Frame 513.png";
 import tutor from "../assets/images/Frame 514.png";
-import "./service.css";
+import "../styles/service.css";
 
 const Service = () => {
   return (
     <>
       <div className="pad_2">
-        <h3 className="about" id="service">About Services</h3>
+        <h3 className="about" id="service">
+          About Services
+        </h3>
         <h1 className="text_2">We can help you solve your problems</h1>
-        <p className="text_3">
+        <div className="t_3">
           Our Arti-Reach services provide to peoples dilemma on where and how to
           get certan artisans services. .
-          <div>
+          <div className="text7">
             At Arti-Reach we connect clients to professional artisans that can
             handle respected category of tasks.
           </div>
-        </p>
+        </div>
         <div className="grid">
           <img src={carpenter} alt="" />
           <img src={potter} alt="" />
@@ -38,7 +40,7 @@ const Service = () => {
           <img src={tutor} alt="" />
         </div>
         <div className="ptn_btn1">
-          <button className="btn_4">Explore Services</button>
+          <button className="btn_4">Choose Services</button>
         </div>
       </div>
     </>

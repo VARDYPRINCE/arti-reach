@@ -1,0 +1,15 @@
+.ad_1{
+    padding: 30px 50px;
+}
+.toggle_section{
+    display: flex;
+    justify-content: space-between;
+}
+.main_line_done{
+    /* border: 1px solid red; */
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding-top: 15px;
+    align-items: center;
+    gap: 500px;
+}

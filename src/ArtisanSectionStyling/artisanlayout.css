@@ -1,0 +1,100 @@
+/* App.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Two equal-width columns */
+  height: 100vh;
+}
+
+.left-pane {
+  background-color: #ffffff; /* Light grey background for the left pane */
+  padding: 20px; /* Add some padding */
+}
+
+.right-pane {
+  /* padding: 20px; */
+  background-color: #f6f6f6;
+}
+.artisan_2 {
+  width: 200px;
+}
+.artisan_2_container {
+  /* border: 1px solid red; */
+  padding-bottom: 30px;
+  padding-top: 14px;
+}
+.artisan_icons {
+  /* border: 1px solid red; */
+  padding-bottom: 40px;
+  display: flex;
+  gap: 10px;
+}
+.input-wrapper_art {
+  /* background-color: red; */
+  background-color: white;
+  width: 280px;
+  height: 10px;
+  border-radius: 24px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  /* border: 1px solid black; */
+}
+.artisan_btu {
+  border: none;
+  background-color: transparent;
+}
+.artisan_btu:hover {
+  background-color: transparent;
+  color: black;
+}
+.artisan {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  background-color: #a4a5a6;
+}
+.profileArtisan {
+  display: flex;
+  /* border: 1px solid red; */
+  /* align-items: center; */
+}
+.pa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.profileArtisan .art_icon {
+  color: #ffffff;
+}
+.art_icon_1 {
+  color: #ffffff;
+  height: 50px;
+  /* border: 1px solid red; */
+  margin-top: 9px;
+}
+.artisan_ {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.okay_oo {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  /* text-align: left; */
+}
+.artisan_ span {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  /* text-align: left; */
+}
