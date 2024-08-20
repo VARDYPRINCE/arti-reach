@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "../styles/about.css";
 import couples from "../assets/images/couple-making-plan-using-tablet-redecorate-house 1.png";
 
 const AboutUs = () => {
@@ -7,7 +7,9 @@ const AboutUs = () => {
     <div className="pad">
       <div className="mainView">
         <div className="contentz">
-          <h3 className="aboutUs" id="aboutUs">About Us</h3>
+          <h3 className="aboutUs" id="aboutUs">
+            About Us
+          </h3>
           <div>
             <h1 className="heading">
               Book <span className="service">Services</span> from the comfort of

@@ -1,0 +1,67 @@
+.footer_ptn {
+  background-color: white;
+  padding: 90px 150px;
+}
+.footer_ptn {
+  justify-content: space-between;
+  display: flex;
+}
+.footer_logo {
+  width: 383px;
+  /* border: 1px solid red; */
+}
+.social_images {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 30px;
+}
+.motto {
+  font-family: "lato";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+.footer_logo img {
+  padding-bottom: 25px;
+}
+.company_footer h4 {
+  padding-bottom: 25px;
+}
+.company_footer div {
+  padding-bottom: 10px;
+}
+.service_footer h4 {
+  padding-bottom: 25px;
+}
+.service_footer div {
+  padding-bottom: 10px;
+}
+.contact_footer h4 {
+  padding-bottom: 25px;
+}
+.contact_footer div {
+  padding-bottom: 10px;
+}
+.name {
+  background-color: white;
+  margin-top: 90px;
+}
+.copyright {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.div_line {
+  margin-bottom: 20px;
+  border: 1;
+  height: 1px;
+  background-color: #ccc;
+  width: 50%;
+  max-width: 600px;
+  margin-left: 550px;
+}
+.phone a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

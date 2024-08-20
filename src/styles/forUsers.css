@@ -1,0 +1,75 @@
+.book_service {
+  margin-top: 50px;
+  text-align: center;
+  color: #A09107;
+  font-family: "lato";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.users_1 {
+  margin-top: 50px;
+  text-align: center;
+  color: #08457E;
+  margin-bottom: 20px;
+  font-family: "lato";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+}
+.line {
+  width: 3px;
+  margin-top: 20px;
+  height: 300px;
+  background-color: #000000;
+  padding-left:2px ;
+}
+.flex {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  height: 400px;
+  background-color: white;
+  align-items: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+.erm {
+  padding: 0px 150px;
+  /* height: 300px; */
+  /* width: 70%; */
+}
+.sign_div {
+  /* border: 1px solid red; */
+  height: 50%;
+  line-height: 2;
+  width: 2000px;
+  padding: 10px 10px;
+}
+.statement_2 {
+  /* border: 1px solid red; */
+  font-family: "lato";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+.force {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.btn_btn {
+  text-align: center;
+  padding-top: 30px;
+}
+.btn_3_ {
+  background-color: #08457e;
+  height: 48px;
+  width: 160px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}

@@ -3,10 +3,15 @@ body {
   margin: 0px;
   box-sizing: border-box;
 }
+.logo_1{
+  width:200px
+}
 .nav_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
+ /* border: 2px solid red; */
 }
 .nav {
   display: flex;
@@ -14,8 +19,10 @@ body {
   width: 396px;
   height: 24px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 20px;
+  /* border: 1px solid red; */
+  margin-right: 90px;
+  line-height: 29px;
   font-family: "lato";  
 }
 .sub {
@@ -45,7 +52,7 @@ body {
   border: none;
   margin-right: 30px;
 }
-.btn-1 {
+.btnx1 {
   width: 145px;
   height: 48px;
   border-radius: 10px;
@@ -57,7 +64,7 @@ body {
   border: 1px solid #0e5acc;
   background-color: #ffffff1a;
 }
-.main {
+.main2 {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
@@ -76,8 +83,10 @@ body {
   height: 291px;
   align-content: center;
 }
-.artisan {
+.artisan_1 {
   color: #08457e;
+  /* width: 100px; */
+  /* border: 1px solid red; */
 }
 .statement {
   width: 468px;
@@ -124,8 +133,8 @@ button:hover {
 }
 .companies {
   text-align: center;
-  margin-top: 50px;
-  font-size: 42px;
+  margin-top: 20px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 63px;
   font-family: "open sans";
@@ -133,7 +142,9 @@ button:hover {
 .sponsors {
   display: flex;
   justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 120px;
 }
 .tenece {
   width: 200px;
@@ -153,4 +164,8 @@ button:hover {
   position: absolute;
   top: 40%;
   right: 0%;
+}
+.tenece{
+  width: 90px;
+  /* align-items: center; */
 }
