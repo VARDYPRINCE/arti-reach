@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/dashboardNavBar.css";
 import logo_3 from "../assets/images/arti-reach logo.png";
-import accountProfile from "../assets/images/account_circle.png"
-import NotificationIcon from "../assets/images/Notification Icon.png"
+import accountProfile from "../assets/images/account_circle.png";
+import NotificationIcon from "../assets/images/Notification Icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
@@ -80,11 +80,8 @@ const Layout = () => {
               <div className="prof">
                 <FaBell className="typo" />
                 <div className="prof2">
-                <img src={accountProfile} alt="" />
-                <div className="compo">
-                {user ? user.name : "" }
-
-                </div>
+                  <img src={accountProfile} alt="" />
+                  <div className="compo">{user ? user.name : ""}</div>
                 </div>
               </div>
             </div>

@@ -28,7 +28,7 @@
   display: flex;
   gap: 10px;
 }
-.input-wrapper_art {
+.input-wrapper_art1 {
   /* background-color: red; */
   background-color: white;
   width: 280px;
@@ -41,27 +41,29 @@
   /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
   /* border: 1px solid black; */
 }
-.artisan_btu {
+.artisan_btus {
   border: none;
   background-color: transparent;
 }
-.artisan_btu:hover {
+.artisan_btun:hover {
   background-color: transparent;
   color: black;
 }
 .artisan {
   /* border: 1px solid red; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 18px 28px;
+  padding: 18px 2Zpx;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-  background-color: #a4a5a6;
+  background-color: #030641;
 }
 .profileArtisan {
   display: flex;
+  margin-left: 500px;
   /* border: 1px solid red; */
   /* align-items: center; */
+  /* border: 2px solid red; */
 }
 .pa {
   display: flex;
@@ -88,7 +90,6 @@
   font-family: Lato;
   font-size: 18px;
   font-weight: 500;
-  color: white;
   line-height: 27px;
   /* text-align: left; */
 }

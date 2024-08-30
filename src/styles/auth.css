@@ -34,7 +34,7 @@
   width: 90%;
   /* border-radius: 15px; */
   height: 860px;
-  margin-left: 50px;  
+  margin-left: 50px;
 }
 
 .logo {
@@ -152,7 +152,7 @@ p a {
   text-decoration: none;
 }
 
-label{
+label {
   padding-top: 10px;
 }
 
@@ -168,15 +168,11 @@ input[type="email"]{
 input[type="password"]{
   padding: 30px 3px;
 } */
-.xyz{
+.xyz {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 450px;
 }
-
-
-
-
 
 /* =----------------------   */

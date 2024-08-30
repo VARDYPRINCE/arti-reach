@@ -1,0 +1,65 @@
+.AdminBody {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+h1 {
+  margin-bottom: 10px;
+}
+
+.overview {
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+.profileArtisan1 {
+  display: flex;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.pa1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.profileArtisan1 .art_icon {
+  color: #ffffff;
+}
+.art_icon {
+  color: #ffffff;
+  height: 50px;
+  /* margin-top: 9px; */
+}
+.okay_oo1 {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  line-height: 27px;
+  /* text-align: left; */
+}
+.artisan_ span {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  /* text-align: left; */
+}
+.artisan_1 {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.artisan_1 span {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  /* text-align: left; */
+}
+
+.profile_name {
+  color: white;
+}

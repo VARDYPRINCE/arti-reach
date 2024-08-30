@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import "../ArtisanSectionStyling/artisanlayout.css";
-import logoArtisan from "../assets/images/arti-reach logo.png";
+import "./AdminStyling/AdminDashboard.css";
+import logoArtisan from "./assets/images/arti-reach logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FaUser } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ArtisanLayouts = () => {
+const AdminDashboradLayaout = () => {
   const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
@@ -24,10 +26,11 @@ const ArtisanLayouts = () => {
       setUser(JSON.parse(userData));
     } else {
       // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/artisanlogin");
     }
   }, []); //
 
+  // ---
+  // console.log(user);
   return (
     <>
       <div className="grid-container">
@@ -40,25 +43,31 @@ const ArtisanLayouts = () => {
                 className="artisan_2"
               />
             </h1>
+
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faHouse} className="icon_" />
-              <Link to="/artisandashboard">Dashboard</Link>
+              <a href="/admindashboard">Dashboard</a>
             </div>
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faBagShopping} className="icon_" />
-              <Link to="/artisannotification">Notification</Link>
+              <a href="/Allnotification">Notification</a>
             </div>
 
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faWrench} className="icon_" />
-              <Link to="/artisanservice">Services</Link>
+              <a href="/Service">Services</a>
+            </div>
+            <div className="artisan_icons">
+              {" "}
+              <FontAwesomeIcon icon={faUser} className="icon_" />
+              <a href="/profile">Profile</a>
             </div>
             <div className="artisan_icons">
               <FontAwesomeIcon icon={faCreditCard} className="icon_" />
-              <a href="/artisanpayment">Payments</a>
+              <a href="/adminpayment">Payments</a>
             </div>
           </div>
         </div>
@@ -73,15 +82,19 @@ const ArtisanLayouts = () => {
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
-            <div className="profileArtisan">
-              <div className="pa">
-                <div className="pa_1">
-                  <FaBell className="art_icon_1" />
+            <div className="profileArtisan1">
+              <div className="pa1">
+                <div className="pa_11">
+                  <FaBell className="art_icon" />
                 </div>
-                <div className="artisan_">
+                <div className="artisan_1">
                   <FaUser className="art_icon" />
-                  <div className="okay_oo">
-                    <span>{user ? user.name : ""}</span>
+                  <br />
+
+                  <div className="okay_oo1">
+                    <span className="profile_name">
+                      {user ? user.name : ""}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -94,4 +107,4 @@ const ArtisanLayouts = () => {
   );
 };
 
-export default ArtisanLayouts;
+export default AdminDashboradLayaout;

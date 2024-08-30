@@ -325,7 +325,8 @@ const Onboarding = () => {
     let formErrors = {};
     if (!formData.name.trim()) formErrors.name = "Full name is required";
     if (!formData.email.trim()) formErrors.email = "Email is required";
-    if (!formData.serviceType) formErrors.serviceType = "Service type is required";
+    if (!formData.serviceType)
+      formErrors.serviceType = "Service type is required";
     if (!formData.address.trim()) formErrors.address = "Address is required";
     if (!formData.area.trim()) formErrors.area = "Area is required";
     return formErrors;

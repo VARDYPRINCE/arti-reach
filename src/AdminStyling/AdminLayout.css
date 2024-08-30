@@ -28,6 +28,11 @@
   display: flex;
   gap: 10px;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
 .input-wrapper_art {
   /* background-color: red; */
   background-color: white;
@@ -56,19 +61,14 @@
   align-items: center;
   padding: 18px 28px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-  background-color: #a4a5a6;
+  background-color: #093351;
 }
 .profileArtisan {
   display: flex;
   /* border: 1px solid red; */
-  /* align-items: center; */
+  margin-left: 85%;
 }
-.pa {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
+
 .profileArtisan .art_icon {
   color: #ffffff;
 }
@@ -88,7 +88,6 @@
   font-family: Lato;
   font-size: 18px;
   font-weight: 500;
-  color: white;
   line-height: 27px;
   /* text-align: left; */
 }

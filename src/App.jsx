@@ -19,6 +19,14 @@ import ArtisanPayment from "./ArtisanSection/ArtisanPayment";
 import ArtisanLogin from "./ArtisanSection/ArtisanLogin";
 import ArtisanRegisterion from "./ArtisanSection/ArtisanRegistration";
 import Onboarding from "./ArtisanSection/Onboarding";
+import AdminLayout from "./Admin/AdminLayout";
+import AdminDashboard from "./Admin/AdminDashboard";
+import Allnotification from "./Admin/allnotification";
+import ArtisanSection from "./Admin/BothSections/ArtisanSection";
+import ClientSection from "./Admin/BothSections/ClientSection";
+import Service from "./Admin/Service";
+import AdminProfile from "./Admin/AdminProfile";
+import AdminDashboradLayaout from "./AdminDashboradLayaout";
 
 function App() {
   return (
@@ -55,6 +63,20 @@ function App() {
           <Route path="/artisanlogin" element={<ArtisanLogin />} />
           <Route path="/artisanregister" element={<ArtisanRegisterion />} />
           <Route path="/onboarding" element={<Onboarding />} />
+
+          <Route path="/" element={<AdminDashboradLayaout />}>
+            <Route path="/" element={<AdminDashboradLayaout />}></Route>
+            <Route path="/admindashboard" element={<AdminDashboard />} />
+          </Route>
+
+          <Route path="/" element={<AdminLayout />}>
+            <Route path="/" element={<AdminLayout />}></Route>
+            <Route path="/Allnotification" element={<Allnotification />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/Profile" element={<AdminProfile />} />
+          </Route>
+          <Route path="/artisansection" element={<ArtisanSection />} />
+          <Route path="/clientsection" element={<ClientSection />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>

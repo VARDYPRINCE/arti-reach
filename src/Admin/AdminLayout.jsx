@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import "../ArtisanSectionStyling/artisanlayout.css";
+import "../AdminStyling/AdminLayout.css";
 import logoArtisan from "../assets/images/arti-reach logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FaUser } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const ArtisanLayouts = () => {
+const AdminLayout = () => {
   const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const ArtisanLayouts = () => {
       setUser(JSON.parse(userData));
     } else {
       // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/artisanlogin");
+      //   navigate("/adminlogin");
     }
   }, []); //
 
@@ -33,32 +33,38 @@ const ArtisanLayouts = () => {
       <div className="grid-container">
         <div className="left-pane">
           <div className="artisanSidebar_1">
-            <h1 className="artisan_2_container">
+            <div className="artisan_2_container">
               <img
                 src={logoArtisan}
                 alt="Arti-Reach Logo"
                 className="artisan_2"
               />
-            </h1>
+            </div>
+
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faHouse} className="icon_" />
-              <Link to="/artisandashboard">Dashboard</Link>
+              <a href="/admindashboard">Dashboard</a>
             </div>
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faBagShopping} className="icon_" />
-              <Link to="/artisannotification">Notification</Link>
+              <a href="/Allnotification">Notification</a>
             </div>
 
             <div className="artisan_icons">
               {" "}
               <FontAwesomeIcon icon={faWrench} className="icon_" />
-              <Link to="/artisanservice">Services</Link>
+              <a href="/Service">Services</a>
+            </div>
+            <div className="artisan_icons">
+              {" "}
+              <FontAwesomeIcon icon={faUser} className="icon_" />
+              <a href="/profile">Profile</a>
             </div>
             <div className="artisan_icons">
               <FontAwesomeIcon icon={faCreditCard} className="icon_" />
-              <a href="/artisanpayment">Payments</a>
+              <a href="/adminpayment">Payments</a>
             </div>
           </div>
         </div>
@@ -67,12 +73,6 @@ const ArtisanLayouts = () => {
 
         <div className="right-pane">
           <div className="artisan">
-            <div className="input-wrapper_art">
-              <input type="text" placeholder="Search" className="input" />
-              <button type="submit" className="artisan_btu">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              </button>
-            </div>
             <div className="profileArtisan">
               <div className="pa">
                 <div className="pa_1">
@@ -80,6 +80,7 @@ const ArtisanLayouts = () => {
                 </div>
                 <div className="artisan_">
                   <FaUser className="art_icon" />
+                  <br></br>
                   <div className="okay_oo">
                     <span>{user ? user.name : ""}</span>
                   </div>
@@ -94,4 +95,4 @@ const ArtisanLayouts = () => {
   );
 };
 
-export default ArtisanLayouts;
+export default AdminLayout;
