@@ -1,105 +1,91 @@
 import { useEffect, useState } from "react";
-import "../ArtisanSectionStyling/artisanlayout.css";
+import "../AdminStyling/AdminLayout.css";
 import logoArtisan from "../assets/images/arti-reach logo.png";
-import profileIcon from "../assets/images/account_circle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faBagShopping,
-  faWrench,
-  faCreditCard,
-} from "@fortawesome/free-solid-svg-icons";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faWrench } from "@fortawesome/free-solid-svg-icons";
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FaUser } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";
+import { Outlet, useNavigate } from "react-router-dom";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "../dropdown/Dropdown";
-import Notification from "../notifications/Notification";
 
-const ArtisanLayouts = () => {
+const AdminLayout = () => {
   const [user, setUser] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Retrieve user data from localStorage
     const userData = localStorage.getItem("user");
+
     if (userData) {
       setUser(JSON.parse(userData));
     } else {
-      navigate("/artisanlogin");
+      // Handle case where there is no user data (e.g., redirect to login)
+      //   navigate("/adminlogin");
     }
-  }, [navigate]);
+  }, []); //
 
   return (
     <>
       <div className="grid-container">
         <div className="left-pane">
           <div className="artisanSidebar_1">
-            <h1 className="artisan_2_container">
+            <div className="artisan_2_container">
               <img
                 src={logoArtisan}
                 alt="Arti-Reach Logo"
                 className="artisan_2"
               />
-            </h1>
+            </div>
+
             <div className="artisan_icons">
-              <NavLink
-                to="/artisandashboard"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-              }
-              >
+              {" "}
               <FontAwesomeIcon icon={faHouse} className="icon_" />
-                Dashboard
-              </NavLink>
+              <a href="/admindashboard">Dashboard</a>
             </div>
             <div className="artisan_icons">
-              <NavLink
-                to="/artisannotification"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-              }
-              >
+              {" "}
               <FontAwesomeIcon icon={faBagShopping} className="icon_" />
-                Notification
-              </NavLink>
+              <a href="/Allnotification">Notification</a>
             </div>
+
             <div className="artisan_icons">
-              <NavLink
-                to="/artisanservice"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-              }
-              >
+              {" "}
               <FontAwesomeIcon icon={faWrench} className="icon_" />
-                Services
-              </NavLink>
+              <a href="/Service">Services</a>
             </div>
             <div className="artisan_icons">
-              <NavLink
-                to="/artisanpayment"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-              }
-              >
+              {" "}
+              <FontAwesomeIcon icon={faUser} className="icon_" />
+              <a href="/profile">Profile</a>
+            </div>
+            <div className="artisan_icons">
               <FontAwesomeIcon icon={faCreditCard} className="icon_" />
-                Payments
-              </NavLink>
+              <a href="/adminpayment">Payments</a>
             </div>
           </div>
         </div>
 
+        {/* ---------------   */}
+
         <div className="right-pane">
           <div className="artisan">
-            <div className="profileArtisans">
+            <div className="profileArtisanhn">
               <div className="pa">
                 <div className="pa_1">
-                  <Notification className="art_icon_1" />
+                  <FaBell className="art_icon_1" />
                 </div>
                 <div className="artisan_">
-                  <div>
-                    <img src={profileIcon} alt="" />
-                  </div>
+                  <FaUser className="art_icon" />
+                  <br></br>
                   <div className="okay_oo">
                     <span>{user ? user.name : ""}</span>
-                    <Dropdown />
                   </div>
+                  <Dropdown />
                 </div>
               </div>
             </div>
@@ -111,4 +97,4 @@ const ArtisanLayouts = () => {
   );
 };
 
-export default ArtisanLayouts;
+export default AdminLayout;

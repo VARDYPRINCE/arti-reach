@@ -1,0 +1,39 @@
+.notif_btn {
+  padding-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs button {
+  background-color: transparent;
+  color: #14171a;
+  border: none;
+  padding: 10px 248px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.tabs button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgb(1, 40, 130);
+  transition: width 0.3s;
+}
+
+.tabs button.active::after {
+  width: 100%;
+}
+
+.tab-content {
+  padding: 20px;
+}

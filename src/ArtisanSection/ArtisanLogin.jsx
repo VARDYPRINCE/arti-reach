@@ -9,7 +9,7 @@ import Reg_img2 from "../assets/images/Group 87.png";
 import { FaGoogle } from "react-icons/fa6";
 
 const ArtisanLogin = () => {
-  // const navigate = useNavigate(); // Hook to navigate
+  const navigate = useNavigate(); // Hook to navigate
 
   const [formData, setFormData] = useState({
     email: "",
@@ -45,6 +45,9 @@ const ArtisanLogin = () => {
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
       try {
+        // Special case for admin credentials
+
+        // Regular login process
         const res = await axios.post(
           "https://artireach.onrender.com/api/v1/user/login",
           {
@@ -54,11 +57,11 @@ const ArtisanLogin = () => {
         );
         setFormSubmitted(true);
         console.log(res.data);
+        console.log(res.data.data.role);
 
         // Save user data to localStorage
         localStorage.setItem("user", JSON.stringify(res.data.data));
         localStorage.setItem("myToken", JSON.stringify(res.data.myToken));
-
         // Check onboarding status
         // const onboardingCompleted = localStorage.getItem("onboardingCompleted");
         // if (onboardingCompleted === "true") {
@@ -66,6 +69,25 @@ const ArtisanLogin = () => {
         // } else {
         //   navigate("/onboarding"); // Redirect to onboarding if not completed
         // }
+        if (res.data.data.role === "admin") {
+          navigate("/admindashboard");
+        }
+        if (
+          res.data.data.role === "artisan" &&
+          res.data.data.isProfileUpdated
+        ) {
+          navigate("/artisandashboard");
+        }
+        if (
+          res.data.data.role === "artisan" &&
+          res.data.data.isProfileUpdated === false
+        ) {
+          navigate("/onboarding");
+        }
+
+        if (res.data.data.role === "client") {
+          navigate("/dashboard");
+        }
       } catch (error) {
         console.error("Login error:", error);
         setResponseError(error.response?.data?.message || "An error occurred");

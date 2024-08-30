@@ -11,13 +11,3 @@ a {
   all: unset;
   cursor: pointer;
 }
-
-/* Responsive Designs */
-/* @media (max-width:1280px){
-  *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-  }
-}
- */
