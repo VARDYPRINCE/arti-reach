@@ -23,7 +23,7 @@ const NotificationBar = () => {
         setToken(JSON.parse(storedToken));
         setUser(JSON.parse(storedUser));
       } else {
-        navigate("/artisanlogin");
+        navigate("/login");
       }
     };
 
@@ -38,7 +38,7 @@ const NotificationBar = () => {
       setUser(JSON.parse(userData));
     } else {
       // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/artisanlogin");
+      navigate("/login");
     }
   }, []);
 

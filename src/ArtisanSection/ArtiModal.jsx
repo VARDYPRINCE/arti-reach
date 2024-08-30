@@ -18,7 +18,7 @@ const ArtiModal = ({ isOpen, onClose, jobId }) => {
       setMytoken(JSON.parse(mytoken));
     } else {
       // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/artisanlogin");
+      navigate("/login");
     }
   }, [navigate]);
 

@@ -23,7 +23,7 @@ const ArtisanService = () => {
         setToken(JSON.parse(storedToken));
         setUser(JSON.parse(storedUser));
       } else {
-        navigate("/artisanlogin");
+        navigate("/login");
       }
     };
 
@@ -53,7 +53,7 @@ const ArtisanService = () => {
           if (error.response?.status === 401) {
             localStorage.removeItem("myToken");
             localStorage.removeItem("user");
-            navigate("/artisanlogin");
+            navigate("/login");
           }
         } finally {
           setLoading(false);

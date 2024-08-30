@@ -29,7 +29,7 @@ const Onboarding = () => {
     if (mytoken) {
       setMytoken(JSON.parse(mytoken));
     } else {
-      navigate("/artisanlogin");
+      navigate("/login");
     }
   }, [navigate]);
 
@@ -109,7 +109,7 @@ const Onboarding = () => {
       );
       console.log("Response:", response);
       if (response.status === 200) {
-        localStorage.setItem("onboardingCompleted", "true");
+        // localStorage.setItem("onboardingCompleted", "true");
         navigate("/artisandashboard");
       } else {
         console.error("Failed to submit form");

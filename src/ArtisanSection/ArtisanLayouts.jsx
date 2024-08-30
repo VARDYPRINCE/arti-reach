@@ -22,7 +22,7 @@ const ArtisanLayouts = () => {
     if (userData) {
       setUser(JSON.parse(userData));
     } else {
-      navigate("/artisanlogin");
+      navigate("/login");
     }
   }, [navigate]);
 
