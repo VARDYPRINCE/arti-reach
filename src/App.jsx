@@ -27,6 +27,7 @@ import ClientSection from "./Admin/BothSections/ClientSection";
 import Service from "./Admin/Service";
 import AdminProfile from "./Admin/AdminProfile";
 import AdminDashboradLayaout from "./AdminDashboradLayaout";
+import ClientService from "./components/ClientService";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
             />
             <Route path="/artisans/:serviceId" element={<ServiceById />} />
             <Route path="/success" element={<BookingSuccessPage />} />
+            <Route path="/serviceforclients" element={<ClientService />} />
           </Route>
 
           <Route path="/" element={<ArtisanLayouts />}>
@@ -64,16 +66,16 @@ function App() {
           <Route path="/artisanregister" element={<ArtisanRegisterion />} />
           <Route path="/onboarding" element={<Onboarding />} />
 
-          <Route path="/" element={<AdminDashboradLayaout />}>
+          {/* <Route path="/" element={<AdminDashboradLayaout />}>
             <Route path="/" element={<AdminDashboradLayaout />}></Route>
-            <Route path="/admindashboard" element={<AdminDashboard />} />
-          </Route>
+          </Route> */}
 
           <Route path="/" element={<AdminLayout />}>
-            <Route path="/" element={<AdminLayout />}></Route>
-            <Route path="/Allnotification" element={<Allnotification />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="/Profile" element={<AdminProfile />} />
+            <Route path="/admindashboard" element={<AdminDashboard />} />
+            {/* <Route path="/" element={<AdminLayout />}></Route> */}
+            <Route path="/allnotification" element={<Allnotification />} />
+            <Route path="/adminservice" element={<Service />} />
+            <Route path="/profile" element={<AdminProfile />} />
           </Route>
           <Route path="/artisansection" element={<ArtisanSection />} />
           <Route path="/clientsection" element={<ClientSection />} />

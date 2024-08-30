@@ -1,9 +1,14 @@
 .container {
   display: grid;
-  grid-template-columns: 280px 1fr; /* Two equal columns */
+  grid-template-columns: 250px 1fr; /* Two equal columns */
   height: 100vh; /* Full viewport height */
 }
 
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+}
 .left {
   background-color: #ffffff; /* Light gray background for the left column */
   padding: 20px; /* Padding inside the column */
@@ -22,13 +27,13 @@
   /* border: solid red; */
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 .prof2 {
   display: flex;
   /* border: 1px solid red; */
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
 .typo {
   color: white;
@@ -48,8 +53,6 @@
   padding: 10px 0px;
 }
 .sidebar img {
-  /* border: 1px solid red; */
-  width: 250px;
   padding-bottom: 50px;
 }
 .sidebar div {
@@ -58,6 +61,10 @@
 .icon_22 {
   /* border: 1px solid red; */
   padding-right: 15px;
+  color: #9d9d9d;
+}
+.letssee {
+  color: #9d9d9d;
 }
 .input-wrapper_1 {
   background-color: white;
@@ -88,9 +95,9 @@ input {
 }
 .flex_main {
   /* background-color: #ffffff; */
-  background-color: #a4a5a6;
-  display: flex;
-  justify-content: space-between;
+  /* background-color: #a4a5a6; */
+  background-color: #08457e;
+
   height: 100px;
   padding-top: 20px;
   padding-left: 50px;
@@ -99,6 +106,8 @@ input {
   /* border: 1px solid red; */
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.06);
   align-items: center;
+  display: flex;
+  justify-content: flex-end;
 }
 input:focus {
   outline: none;
@@ -154,6 +163,17 @@ input:focus {
   font-weight: 400;
   line-height: 19.2px;
 }
+.input11 {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
+  margin-bottom: 30px;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  width: 460px;
+}
 .input2 {
   height: 80px;
   padding: 10px;
@@ -189,17 +209,27 @@ input:focus {
 }
 /* --------New Styles----------  */
 .new_container {
-  padding: 40px 40px;
+  padding: 15px 10px;
+  /* border: 1px solid red; */
 }
 .nc_1 {
   font-family: "lato";
   font-size: 14px;
   font-weight: 700px;
   /* line-height: 24px; */
+  /* border: 1px solid red; */
+}
+.nc_1 h2 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 .sub_nc_1 {
   padding-top: 10px;
   font-family: "Lato";
+  display: flex;
+  justify-content: center;
 }
 .nc_2 {
   padding-top: 5px;
@@ -209,6 +239,9 @@ input:focus {
   text-align: center;
   color: #000000;
   /* line-height: 36px; */
+  /* border: 1px solid red; */
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .nc_3 {
   display: flex;
@@ -291,103 +324,130 @@ input:focus {
   transition: background-color 0.3s ease;
   font-weight: 500;
 }
-
-/* .dasbtn:hover {
-  background-color: #0056b3;
-} */
-/* .dasbtn_1 {
-  width: 78%;
-  background-color: #08457e;
-  color: white;
-  border: none;
-  padding: 10px 0;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
-} */
 .grid_1 {
   border: 1px solid red;
   display: grid;
   grid-template-columns: auto auto;
 }
 
-/* .dasbtn_1:hover {
-  background-color: #0056b3;
-} */
-@media (max-width: 1024px) {
-  .apii {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .apii {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ---------------trial on input box-------------  */
+/* -----------------------------  */
 .container_2001 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .ServicesbyId {
-  width: 100%;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+}
+
+.service_1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .serviceContainer {
+  gap: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 20px; /* Space between cards */
-  justify-content: center;
+  grid-template-columns: auto auto auto;
 }
 
 .main_item_container {
   display: flex;
-  flex-direction: row;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
+  background: #ffffff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 200px;
+  overflow: hidden;
+  max-width: 600px;
   width: 80%;
-  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* border: 1px solid red; */
 }
+
+.main_item_container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pressure {
+  flex: 0 0 150px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
 .card-image {
-  margin-top: 28px;
-  padding-left: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
 .card-content {
   flex: 1;
-  padding: 16px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.item-name {
-  font-weight: bold;
+
+.item-description {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 10px;
 }
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-ratings {
+  margin-bottom: 10px;
+}
+
+.item_actions {
+  margin-bottom: 10px;
+}
+
 .action_items {
   background-color: transparent;
-  border: 1px solid #0e5acc;
-  padding: 5px;
-  width: 38%;
-  color: #0e5acc;
+  color: white;
+  border: 1px solid #0056b3;
+  color: #0056b3;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  width: 100px;
 }
-.dasbtn_1 {
+
+.action_items:hover {
   background-color: #08457e;
-  padding: 5px;
-  width: 38%;
+  color: #fff;
+}
+
+.dasbtn_1 {
+  background-color: #0056b3;
   color: white;
   border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  transition: background-color 0.3s;
 }
-.service_1 {
-  padding: 20px;
-  text-align: center;
+
+.dasbtn_1:hover {
+  background-color: #08457e;
 }
-/* ----------------  */
+
+/* -------------styling update-------- */
+.artisan_3 {
+  width: 200px;
+}
+
+/* ---------------------  */

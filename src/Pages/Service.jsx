@@ -1,4 +1,3 @@
-import React from "react";
 import carpenter from "../assets/images/Frame 519.png";
 import potter from "../assets/images/Frame 518.png";
 import plumber from "../assets/images/Frame 517.png";

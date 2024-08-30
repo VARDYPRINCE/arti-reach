@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
-  .main_container {
+  .main_containerr1 {
     display: grid;
     grid-template-columns: 50% 60%; /* Two equal columns */
     height: 100vh; /* Full viewport height */

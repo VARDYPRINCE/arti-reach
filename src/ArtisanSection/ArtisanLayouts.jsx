@@ -1,32 +1,30 @@
 import { useEffect, useState } from "react";
 import "../ArtisanSectionStyling/artisanlayout.css";
 import logoArtisan from "../assets/images/arti-reach logo.png";
+import profileIcon from "../assets/images/account_circle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
-import { faWrench } from "@fortawesome/free-solid-svg-icons";
-import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FaUser } from "react-icons/fa";
-import { FaBell } from "react-icons/fa";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import {
+  faHouse,
+  faBagShopping,
+  faWrench,
+  faCreditCard,
+} from "@fortawesome/free-solid-svg-icons";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import Dropdown from "../dropdown/Dropdown";
+import Notification from "../notifications/Notification";
 
 const ArtisanLayouts = () => {
   const [user, setUser] = useState(null);
-
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve user data from localStorage
     const userData = localStorage.getItem("user");
-
     if (userData) {
       setUser(JSON.parse(userData));
     } else {
-      // Handle case where there is no user data (e.g., redirect to login)
       navigate("/artisanlogin");
     }
-  }, []); //
+  }, [navigate]);
 
   return (
     <>
@@ -41,47 +39,66 @@ const ArtisanLayouts = () => {
               />
             </h1>
             <div className="artisan_icons">
-              {" "}
+              <NavLink
+                to="/artisandashboard"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+              }
+              >
               <FontAwesomeIcon icon={faHouse} className="icon_" />
-              <Link to="/artisandashboard">Dashboard</Link>
+                Dashboard
+              </NavLink>
             </div>
             <div className="artisan_icons">
-              {" "}
+              <NavLink
+                to="/artisannotification"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+              }
+              >
               <FontAwesomeIcon icon={faBagShopping} className="icon_" />
-              <Link to="/artisannotification">Notification</Link>
+                Notification
+              </NavLink>
             </div>
-
             <div className="artisan_icons">
-              {" "}
+              <NavLink
+                to="/artisanservice"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+              }
+              >
               <FontAwesomeIcon icon={faWrench} className="icon_" />
-              <Link to="/artisanservice">Services</Link>
+                Services
+              </NavLink>
             </div>
             <div className="artisan_icons">
+              <NavLink
+                to="/artisanpayment"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+              }
+              >
               <FontAwesomeIcon icon={faCreditCard} className="icon_" />
-              <a href="/artisanpayment">Payments</a>
+                Payments
+              </NavLink>
             </div>
           </div>
         </div>
 
-        {/* ---------------   */}
-
         <div className="right-pane">
           <div className="artisan">
-            <div className="input-wrapper_art">
-              <input type="text" placeholder="Search" className="input" />
-              <button type="submit" className="artisan_btu">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              </button>
-            </div>
-            <div className="profileArtisan">
+            <div className="profileArtisans">
               <div className="pa">
                 <div className="pa_1">
-                  <FaBell className="art_icon_1" />
+                  <Notification className="art_icon_1" />
                 </div>
                 <div className="artisan_">
-                  <FaUser className="art_icon" />
+                  <div>
+                    <img src={profileIcon} alt="" />
+                  </div>
                   <div className="okay_oo">
                     <span>{user ? user.name : ""}</span>
+                    <Dropdown />
                   </div>
                 </div>
               </div>

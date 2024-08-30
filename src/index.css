@@ -6,3 +6,8 @@
 body {
   background-color: #f5f8ff;
 }
+a {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+}

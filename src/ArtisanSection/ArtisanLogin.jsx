@@ -103,6 +103,10 @@ const ArtisanLogin = () => {
     setShowPassword(!showPassword);
   };
 
+  // if (res.data.role) === "artisan") {
+  //   navigate("/admin"); 
+  // }
+
   return (
     <div className="login-container">
       <div className="Login_image_container">

@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/about.css";
 import couples from "../assets/images/couple-making-plan-using-tablet-redecorate-house 1.png";
 
@@ -12,7 +11,7 @@ const AboutUs = () => {
           </h3>
           <div>
             <h1 className="heading">
-              Book <span className="service">Services</span> from the comfort of
+              Book Services from the comfort of
               your Home.
             </h1>
             <p className="statement_1">

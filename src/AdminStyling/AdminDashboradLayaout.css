@@ -59,9 +59,10 @@
   background-color: #030641;
 }
 .profileArtisan {
-  display: flex;
-  margin-left: 500px;
-  /* border: 1px solid red; */
+  display: flex-end;
+  /* justify-content: space-between; */
+  /* margin-left: 500px; */
+  /* border: 100 solid red; */
   /* align-items: center; */
   /* border: 2px solid red; */
 }

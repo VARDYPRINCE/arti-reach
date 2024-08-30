@@ -1,19 +1,106 @@
 .ad_1 {
   padding: 30px 50px;
+.ad_1 {
+  padding: 30px 50px;
 }
 .toggle_section {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 50px;
 }
 .main_line_done {
   /* border: 1px solid red; */
   display: flex;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   padding-top: 15px;
   align-items: center;
-  gap: 500px;
+  /* gap: 500px; */
+}
+.lineejob_1 {
+  margin-bottom: 15px;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 600;
+}
+.twelves {
+  text-align: center;
+}
+.twelves1 {
+  text-align: center;
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.togs{
+  /* border: 1px solid red; */
+  font-family: Lato;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.2px;
+text-align: right;
+
+}
+.twelvess{
+  text-align: center;
+}
+.dotted_line{
+  text-decoration: underline;
+}
+.togs {
+  display: flex;
+  justify-content: flex-end;
 }
 
-h5 {
-  color: white;
+/* ---------booox------  */
+.boxesnotification {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 40vh;
+  /* width: 100vw;           */
+  margin-top: 40px;
+}
+
+/* Optionally, you can add some styles for the image itself */
+.boxesnotification img {
+  max-width: 100%;
+}
+.boxesnot {
+  margin-left: 80px;
+}
+.bxnot {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  justify-content: center;
+  border-radius: 20px;
+  padding: 10px;
+  width: 300px;
+  gap: 10px;
+  background-color: #deecfa;
+}
+.boxesnotification3 {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+}
+#phase {
+  display: flex;
+  justify-content: space-between;
+}
+.input-wrapper_arti {
+  /* background-color: red; */
+  background-color: white;
+  width: 280px;
+  height: 10px;
+  border-radius: 24px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  /* border: 1px solid black; */
 }

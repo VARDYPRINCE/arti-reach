@@ -10,6 +10,7 @@ import { FaUser } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { Outlet, useNavigate } from "react-router-dom";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import Dropdown from "../dropdown/Dropdown";
 
 const AdminLayout = () => {
   const [user, setUser] = useState(null);
@@ -73,7 +74,7 @@ const AdminLayout = () => {
 
         <div className="right-pane">
           <div className="artisan">
-            <div className="profileArtisan">
+            <div className="profileArtisanhn">
               <div className="pa">
                 <div className="pa_1">
                   <FaBell className="art_icon_1" />
@@ -84,6 +85,7 @@ const AdminLayout = () => {
                   <div className="okay_oo">
                     <span>{user ? user.name : ""}</span>
                   </div>
+                  <Dropdown />
                 </div>
               </div>
             </div>

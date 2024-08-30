@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/dashboardNavBar.css";
 import ServiceModal from "./ServiceModal";
 import { useParams } from "react-router-dom";
@@ -96,7 +96,7 @@ const ServiceInformation = () => {
           name="date"
           value={bookingData.date}
           onChange={handleInputChange}
-          className="input1"
+          className="input11"
           placeholder="Enter date of completion"
         />
         {errors.date && <p className="error">{errors.date}</p>}

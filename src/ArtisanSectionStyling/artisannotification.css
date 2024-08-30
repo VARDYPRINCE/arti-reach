@@ -1,47 +1,77 @@
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 0.2fr); /* Three columns */
-  gap: 16px; /* Space between grid items */
-  padding: 16px; /* Space around the grid container */
+  grid-template-columns: repeat(4, 0.2fr);
+  gap: 16px;
+  padding: 16px;
 }
 
 .gridItem1 {
-  background-color: #fff; /* Card background color */
-  border: 1px solid #ddd; /* Border around the card */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 16px; /* Space inside the card */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  /* text-align: left; */
+  /* align-items: start; */
 }
-
-/* .vector_img img {
-  width: 24px; 
-  height: 24px;
-} */
-
 .button_main2 {
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Rounded corners */
-  padding: 8px 16px; /* Button padding */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Button text size */
+  background-color: #08457e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
 }
 
 .button_main2:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3;
 }
 
 .gridItem div {
-  margin-bottom: 8px; /* Space between text elements */
+  margin-bottom: 8px;
 }
 
-.t_description, .lo_cation {
-  color: #666; /* Text color for description and location */
+.t_description,
+.lo_cation {
+  color: #666;
+}
+
+.client_notification {
+  margin-top: 30px;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.nn {
+  width: 100%;
+}
+
+.nn button {
+  margin-top: 20px;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.t_description {
+  margin-top: 10px;
+}
+
+.tsk_1 {
+  margin-top: 10px;
+  color: #666;
+}
+
+.lo_cation {
+  margin-top: 10px;
+}
+
+.vector_img {
+  text-align: center;
 }

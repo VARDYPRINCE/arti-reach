@@ -142,6 +142,7 @@ const RegistrationForm = () => {
           </p>
           <br />
           <button type="submit" disabled={loading}>
+            {/* {loading ? "Creating account..." : "Create account"} */}
             {loading ? "Creating account..." : "Create account"}
             {loading && <span className="loading-spinner" />}
             {response && <p>Logged in successfully!</p>}

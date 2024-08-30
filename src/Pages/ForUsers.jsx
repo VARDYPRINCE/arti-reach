@@ -50,6 +50,12 @@ const ForUsers = () => {
           </span>
         </div>
       </div>
+
+      <div className="btn_btn">
+        <Link to="/artisanregister">
+          <button className="btn_3_">Try Services</button>
+        </Link>
+      </div>
       <div>
         <h2 className="users_1">For Artisans</h2>
       </div>
@@ -76,13 +82,13 @@ const ForUsers = () => {
           </span>
         </div>
 
-        <div className="line"></div>
+        <div className="line_1"></div>
 
         <div className="sign_div">
           <div className="force">
             <img src={bold} alt="" />
           </div>
-          <p className="statement_2">
+          <p className="statement_3">
             Accept user request, goes and completes tasks then get paid.
           </p>
         </div>

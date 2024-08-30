@@ -1,7 +1,5 @@
 // import React, { useEffect, useState } from "react";
 import "../AdminStyling/AdminDashboard.css";
-import "../AdminDashboradLayaout";
-import "../AdminDashboradLayaout";
 
 const AdminDashboard = () => {
   return (

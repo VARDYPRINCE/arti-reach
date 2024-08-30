@@ -1,29 +1,26 @@
-/* App.css */
-.grid-container {
+
+.grid-containerHN {
   display: grid;
-  grid-template-columns: 280px 1fr; /* Two equal-width columns */
+  grid-template-columns: 280px 1fr; 
   height: 100vh;
 }
 
-.left-pane {
-  background-color: #ffffff; /* Light grey background for the left pane */
-  padding: 20px; /* Add some padding */
+.left-paneHN {
+  background-color: #ffffff; 
+  padding: 20px;
 }
 
-.right-pane {
-  /* padding: 20px; */
+.right-paneHN {
   background-color: #f6f6f6;
 }
 .artisan_2 {
   width: 200px;
 }
-.artisan_2_container {
-  /* border: 1px solid red; */
+.artisan_2_containerHN {
   padding-bottom: 30px;
   padding-top: 14px;
 }
 .artisan_icons {
-  /* border: 1px solid red; */
   padding-bottom: 40px;
   display: flex;
   gap: 10px;
@@ -34,7 +31,6 @@ a {
   color: #000;
 }
 .input-wrapper_art {
-  /* background-color: red; */
   background-color: white;
   width: 280px;
   height: 10px;
@@ -43,8 +39,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-  /* border: 1px solid black; */
 }
 .artisan_btu {
   border: none;
@@ -54,8 +48,7 @@ a {
   background-color: transparent;
   color: black;
 }
-.artisan {
-  /* border: 1px solid red; */
+.artisanHN {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,9 +56,8 @@ a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
   background-color: #093351;
 }
-.profileArtisan {
+.profileArtisanHN{
   display: flex;
-  /* border: 1px solid red; */
   margin-left: 85%;
 }
 
@@ -75,11 +67,9 @@ a {
 .art_icon_1 {
   color: #ffffff;
   height: 50px;
-  /* border: 1px solid red; */
   margin-top: 9px;
 }
 .artisan_ {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   gap: 5px;
@@ -89,12 +79,15 @@ a {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  /* text-align: left; */
 }
 .artisan_ span {
   font-family: "Lato";
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  /* text-align: left; */
+}
+.profileArtisanhn{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/choose.css";
 import cap from "../assets/images/Frame 533.png";
 import tool from "../assets/images//Frame 534.png";
