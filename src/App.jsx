@@ -1,6 +1,6 @@
 import "./App.css";
 import RegistrationForm from "./Pages/RegistrationForm";
-import LoginForm from "./Pages/LoginForm";
+// import LoginForm from "./Pages/LoginForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Pages/Main";
 import Home from "./Pages/Home";
@@ -36,7 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/register" element={<RegistrationForm />} />
-          <Route path="/login" element={<LoginForm />} />
+          {/* <Route path="/login" element={<LoginForm />} /> */}
+          <Route path="/login" element={ <ArtisanLogin /> } />
           <Route path="/hireNow" element={<HireNow />} />
 
           <Route path="/" element={<Layout />}>
@@ -62,7 +63,7 @@ function App() {
             <Route path="/artisanpayment" element={<ArtisanPayment />} />
           </Route>
 
-          <Route path="/artisanlogin" element={<ArtisanLogin />} />
+          {/* <Route path="/artisanlogin" element={<ArtisanLogin />} /> */}
           <Route path="/artisanregister" element={<ArtisanRegisterion />} />
           <Route path="/onboarding" element={<Onboarding />} />
 

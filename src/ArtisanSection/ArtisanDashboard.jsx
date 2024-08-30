@@ -83,7 +83,7 @@ const ArtisanDashboard = () => {
         setUser(JSON.parse(userData));
         setLoading(false); // Set loading to false once user data is retrieved
       } else {
-        navigate("/artisanlogin");
+        navigate("/login");
       }
     };
 

@@ -80,7 +80,7 @@ const ArtisanRegisterion = () => {
         });
         // Redirect to login after successful registration
         setTimeout(() => {
-          navigate("/artisanlogin"); // Navigate to login page
+          navigate("/login"); // Navigate to login page
         }, 1000); // Simulate a delay for better user experience
       } catch (error) {
         console.error("Form submission error:", error);
@@ -238,7 +238,7 @@ const ArtisanRegisterion = () => {
           <div className="register-footer">
             <p className="login-link">
               Already have an account?{" "}
-              <Link to="/artisanlogin">Login here</Link>
+              <Link to="/login">Login here</Link>
             </p>
           </div>
         </form>

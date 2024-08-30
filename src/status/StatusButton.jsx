@@ -119,7 +119,7 @@ const StatusButton = ({ myStatus, jobId }) => {
     if (storedToken) {
       setToken(JSON.parse(storedToken));
     } else {
-      navigate("/artisanlogin");
+      navigate("/login");
     }
   }, [navigate]);
 

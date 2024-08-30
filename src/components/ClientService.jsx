@@ -130,7 +130,7 @@ const ClientService = () => {
         setToken(JSON.parse(storedToken));
         setUser(JSON.parse(storedUser));
       } else {
-        navigate("/artisanlogin");
+        navigate("/login");
       }
     };
 
@@ -160,7 +160,7 @@ const ClientService = () => {
           if (error.response?.status === 401) {
             localStorage.removeItem("myToken");
             localStorage.removeItem("user");
-            navigate("/artisanlogin");
+            navigate("/login");
           }
         } finally {
           setLoading(false);

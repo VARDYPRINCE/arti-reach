@@ -144,7 +144,7 @@ const ArtisanNotification = () => {
         setToken(JSON.parse(storedToken));
         setUser(JSON.parse(storedUser));
       } else {
-        navigate("/artisanlogin");
+        navigate("/login");
       }
     };
 
