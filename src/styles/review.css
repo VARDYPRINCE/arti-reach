@@ -1,21 +1,19 @@
 .review_title {
   color: #a09107;
-  margin-top: 50px;
-  font-family: "open sans";
+  margin-top: 30px;
+  font-family: "inter";
   font-weight: 600;
   font-size: 20px;
-  line-height: 24.2px;
-  /* text-align: center; */
-  /* border: 1px solid; */
+  line-height: 33.89px;
 }
 .review {
   padding: 0px 150px;
 }
 .fam_grid {
-  padding-top: 70px;
-  display: grid;
-  grid-template-columns: auto auto;
-  /* border: 1px solid red; */
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .statement_ {
   /* border: 1px solid red; */
@@ -27,20 +25,18 @@
   width: 600px;
 }
 .happy_clients {
-  font-family: "open sans";
-  font-size: 36px;
+  font-family: "Inter";
+  font-size: 30px;
   font-weight: 600;
-  line-height: 43.47px;
+  line-height: 36.31px;
+  padding-bottom: 10px;
 }
 .happy_paragraph {
   font-family: "lato";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 24px;
   letter-spacing: 0.02em;
-  /* border: 1px solid red;
-  width: 350px; */
-  /* text-align: left; */
 }
 .review_box {
   /* border: 1px solid red; */
@@ -52,11 +48,17 @@
 .btn_review {
   width: 141.82px;
   height: 48.62px;
-  /* gap: 24.31px; */
-  border-radius: 10px;
+  border-radius: 11px;
   background-color: #08457e;
   color: white;
+  border: none;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
 }
-.btn_review_btn{
-    padding-top: 30px;
+.btn_review_btn {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }

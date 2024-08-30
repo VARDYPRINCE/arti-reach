@@ -1,10 +1,9 @@
-import React from 'react';
-import '../styles/loading.css'; // Import your CSS file for styling
+import "../styles/loading.css"; // Assuming you create this CSS file
 
 const Loading = () => {
   return (
-    <div className="loaderSt">
-      <p></p>
+    <div className="loading-overlay">
+      <div className="spinner"></div>
     </div>
   );
 };

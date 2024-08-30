@@ -4,36 +4,38 @@
   margin-top: 70px;
 }
 .about {
-  margin-top: 50px;
   text-decoration: underline;
   color: #a09107;
-  font-size: 24px;
-  line-height: 28.05px;
   font-weight: 600;
-  font-family: "open sans";
   text-align: center;
+  font-family: "Lato";
+  font-size: 28px;
+  line-height: 33.6px;
 }
 .text_2 {
   text-align: center;
-  font-size: 48px;
   font-weight: 600;
-  line-height: 58.09px;
-  margin-top: 30px;
-  font-family: "open sans";
+  padding-top: 25px;
+  font-family: "Lato";
+  font-size: 30px;
+}
+.text7 {
+  padding-bottom: 30px;
 }
 .t_3 {
-  margin-top: 10px;
-  font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   color: #000000;
   text-align: center;
   font-family: "lato";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 .grid {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 60px;
 }
 .ptn_btn1 {
@@ -45,6 +47,6 @@
   border-radius: 10px;
   border: none;
   background-color: #08457e;
-  color: white;  
+  color: white;
   padding: 10px;
 }

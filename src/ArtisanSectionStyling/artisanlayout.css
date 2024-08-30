@@ -13,9 +13,11 @@
 .right-pane {
   /* padding: 20px; */
   background-color: #f6f6f6;
+  /* background-color: #08457e; */
 }
 .artisan_2 {
   width: 200px;
+  margin-left: 20px;
 }
 .artisan_2_container {
   /* border: 1px solid red; */
@@ -24,6 +26,7 @@
 }
 .artisan_icons {
   /* border: 1px solid red; */
+  margin-left: 20px;
   padding-bottom: 40px;
   display: flex;
   gap: 10px;
@@ -51,23 +54,29 @@
 }
 .artisan {
   /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 18px 28px;
+  padding: 28px 45px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-  background-color: #a4a5a6;
+  /* background-color: #a4a5a6; */
+  background-color: #08457e;
+  height: 100px;
 }
 .profileArtisan {
   display: flex;
-  /* border: 1px solid red; */
+  border: 1px solid red;
+  margin-right: 40px;
   /* align-items: center; */
 }
 .pa {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+  gap: 10px;
+}
+.profileArtisans {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
 }
 .profileArtisan .art_icon {
   color: #ffffff;
@@ -83,18 +92,75 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  padding-right: 10px;
 }
 .okay_oo {
   font-family: Lato;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  /* text-align: left; */
+  color: white;
 }
 .artisan_ span {
   font-family: "Lato";
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
-  /* text-align: left; */
 }
+.icon_ {
+  color: #9d9d9d;
+  margin-right: 10px;
+}
+.artisan_icons {
+  /* border: 1px solid red; */
+  align-items: center;
+}
+.artisan_icons {
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+
+/* ArtisanSectionStyling/artisanlayout.css */
+
+/* Styles for the sidebar links */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px;
+}
+
+/* Styles for active link */
+.nav-link.active {
+  background-color: #08457e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Styles for hover effect on links */
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+/* Styling for icons in the sidebar */
+.artisan_icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon_ {
+  /* color: #007bff; */
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+

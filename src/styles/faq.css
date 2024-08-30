@@ -1,61 +1,73 @@
-.faq_ptn {
-  padding: 60px 150px;
-}
-.faq_padding {
-  display: grid;
-  grid-template-columns: auto auto;
-  height: 467px;
-}
-.first_side {
-  color: black;
-  padding-top: 150px;
-  padding-left: 30px;
-  text-align: center;
-  background-color: #FEFCFC7D;
-  border-radius: 10px;
-}
-.second_slide {
-  color: white;
+.faqcon {
+  margin-top: 70px;
   background-color: #08457e;
-  padding-bottom: 45px;
+  padding: 50px 150px;
+  color: #ffff;
 }
-.p_tag{
-    padding-left: 30px;
+.faq-container {
+  height: 100%;
+  text-align: center;
 }
-.margin_padding{
-    padding-bottom: 45px;
-}
-.question_tag {
-  font-family: Lato;
-  font-size: 17.97px;
-  font-weight: 400;
-  line-height: 26.96px;
-  letter-spacing: 0.02em;
-}
-.second_slide {
-  width: 900px;
+.faqh1 {
   font-family: "Lato";
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
+}
+.fa_1 {
+  font-family: "Lato";
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: center;
+}
+.fa_2 {
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.faq-question {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
   text-align: left;
+}
+.fa_3 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 18px 50px;
+  background-color: #fff;
+  color: black;
+  width: 700px;
+}
+.fa_5 {
   padding-top: 30px;
-  border-radius: 10px;
-  padding-left: 30px;
-}
-.p_tag {
+  text-align: center;
   font-family: Lato;
-  font-size: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.fa_6 {
+  font-family: "Lato";
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 20.8px;
+  text-align: center;
 }
-.ques{
-    font-family: Lato;
-font-size: 47.93px;
-font-weight: 700;
-line-height: 57.51px;
-text-align: left;
+.faq-answer {
+  padding: 20px 370px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
 }
-.title_faq{
-  color: #A09107;
+.fa_4{
+  cursor: pointer;
 }

@@ -9,7 +9,7 @@ import Reg_img2 from "../assets/images/Group 87.png";
 import { FaGoogle } from "react-icons/fa6";
 
 const ArtisanLogin = () => {
-  const navigate = useNavigate(); // Hook to navigate
+  // const navigate = useNavigate(); // Hook to navigate
 
   const [formData, setFormData] = useState({
     email: "",
@@ -60,12 +60,12 @@ const ArtisanLogin = () => {
         localStorage.setItem("myToken", JSON.stringify(res.data.myToken));
 
         // Check onboarding status
-        const onboardingCompleted = localStorage.getItem("onboardingCompleted");
-        if (onboardingCompleted === "true") {
-          navigate("/artisandashboard"); // Redirect to dashboard if onboarding is complete
-        } else {
-          navigate("/onboarding"); // Redirect to onboarding if not completed
-        }
+        // const onboardingCompleted = localStorage.getItem("onboardingCompleted");
+        // if (onboardingCompleted === "true") {
+        //   navigate("/artisandashboard"); // Redirect to dashboard if onboarding is complete
+        // } else {
+        //   navigate("/onboarding"); // Redirect to onboarding if not completed
+        // }
       } catch (error) {
         console.error("Login error:", error);
         setResponseError(error.response?.data?.message || "An error occurred");
@@ -80,6 +80,10 @@ const ArtisanLogin = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  // if (res.data.role) === "artisan") {
+  //   navigate("/admin"); 
+  // }
 
   return (
     <div className="login-container">

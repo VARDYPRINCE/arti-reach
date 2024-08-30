@@ -1,5 +1,4 @@
-import React from 'react';
-import '../styles/modalBooking.css'; // Ensure this path is correct
+import '../styles/modalBooking.css'; 
 
 const BookingSuccessPage = () => {
   return (
@@ -7,7 +6,7 @@ const BookingSuccessPage = () => {
       <div className="success-container">
         <h1>Booking Successful!</h1>
         <p>Service Successfully Requested. Thank you!</p>
-        <button onClick={() => window.location.href = '/'}>
+        <button onClick={() => window.location.href = '/dashboard'}>
           Close
         </button>
       </div>

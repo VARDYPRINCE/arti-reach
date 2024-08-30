@@ -3,27 +3,26 @@ body {
   margin: 0px;
   box-sizing: border-box;
 }
-.logo_1{
-  width:200px
+.logo_1 {
+  width: 200px;
 }
 .nav_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
- /* border: 2px solid red; */
+}
+.view {
+  background-color: #fafafa;
+  padding: 20px 150px;
 }
 .nav {
   display: flex;
   gap: 30px;
-  width: 396px;
   height: 24px;
   font-weight: 400;
-  font-size: 20px;
-  /* border: 1px solid red; */
-  margin-right: 90px;
-  line-height: 29px;
-  font-family: "lato";  
+  font-size: 14px;
+  justify-content: space-between;
+  font-family: "lato";
 }
 .sub {
   font-weight: 400;
@@ -42,15 +41,15 @@ body {
   width: 145px;
   height: 48px;
   border-radius: 10px;
-  padding: 52px, 30px, 52px, 30px;
+  /* padding: 52px, 30px, 52px, 30px; */
   background-color: #08457e;
-
   color: #e8e8e8;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   margin-right: 30px;
+  font-family: "Inter";
 }
 .btnx1 {
   width: 145px;
@@ -107,9 +106,14 @@ body {
   height: 56px;
   border-radius: 10px;
   background-color: #08457e;
-
   color: #e8e8e8;
   border: none;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 600;
+}
+.button1 {
+  margin-top: 10px;
 }
 .btn_3 {
   width: 160px;
@@ -120,31 +124,31 @@ body {
   border: 1.35px solid #366a8f;
   color: #0e5acc;
 }
-.button {
+/* .button {
   margin-top: 20px;
-}
+} */
 button:hover {
   cursor: pointer;
 }
-.view {
-  background-color: #fafafa;
-  padding: 0px 150px;
-  margin-top: 50px;
-}
 .companies {
+  padding: 30px 0px;
   text-align: center;
   margin-top: 20px;
   font-size: 32px;
   font-weight: 600;
-  line-height: 63px;
-  font-family: "open sans";
+  line-height: 48px;
+  font-family: "lato";
+  color: #0a0b0c;
 }
 .sponsors {
   display: flex;
   justify-content: space-around;
   justify-content: center;
   align-items: center;
-  gap: 120px;
+  gap: 620px;
+}
+.company{
+  padding-bottom: 30px;
 }
 .tenece {
   width: 200px;
@@ -165,7 +169,24 @@ button:hover {
   top: 40%;
   right: 0%;
 }
-.tenece{
+.tenece {
   width: 90px;
   /* align-items: center; */
+}
+.update_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-bottom: 10px;
+  font-family: "lato";
+  font-size: 14px;
+  font-weight: 400;
+}
+.update_2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

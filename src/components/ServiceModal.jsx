@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/modal.css';
+import { useEffect, useState } from 'react';
 
 const ServiceModal = ({ isOpen, onClose, bookingData, artisanId }) => {
   const [token, setMytoken] = useState(null);
@@ -15,7 +15,7 @@ const ServiceModal = ({ isOpen, onClose, bookingData, artisanId }) => {
     if (mytoken) {
       setMytoken(JSON.parse(mytoken));
     } else {
-      // Handle case where there is no user data (e.g., redirect to login)
+      // Handle case where there is no user data (redirect to login)
       navigate("/login");
     }
   }, []);
@@ -34,10 +34,10 @@ const ServiceModal = ({ isOpen, onClose, bookingData, artisanId }) => {
 
       console.log(response.data);
 
-      // Navigate to success page and pass bookingData
+     
       navigate('/success', { state: { bookingData } });
       
-      // Optionally, close the modal after navigation
+     
       onClose();
     } catch (error) {
       console.error("Error confirming booking:", error);
@@ -71,7 +71,7 @@ ServiceModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   bookingData: PropTypes.object.isRequired,
-  artisanId: PropTypes.string.isRequired, // Add this prop type for artisanId
+  artisanId: PropTypes.string.isRequired, 
 };
 
 export default ServiceModal;

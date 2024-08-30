@@ -19,6 +19,7 @@ import ArtisanPayment from "./ArtisanSection/ArtisanPayment";
 import ArtisanLogin from "./ArtisanSection/ArtisanLogin";
 import ArtisanRegisterion from "./ArtisanSection/ArtisanRegistration";
 import Onboarding from "./ArtisanSection/Onboarding";
+import ClientService from "./components/ClientService";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             />
             <Route path="/artisans/:serviceId" element={<ServiceById />} />
             <Route path="/success" element={<BookingSuccessPage />} />
+            <Route path="/serviceforclients" element={<ClientService />} />
           </Route>
 
           <Route path="/" element={<ArtisanLayouts />}>

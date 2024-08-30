@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/dashboardNavBar.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import Ratings from "../components/Ratings";
-import proifilepicture from "../assets/images/Vector (3).png"
+import proifilepicture from "../assets/images/Vector (3).png";
 
 const ServiceById = () => {
   // const userName = useSelector((store) => store.user.email);
@@ -24,7 +24,7 @@ const ServiceById = () => {
     }
   };
   //artireach.onrender.com/api/v1/users/66b4f84521a1bdf62b7db9a4  https:
-   useEffect(() => {
+  useEffect(() => {
     if (serviceId) {
       fetchArtsansByIdData(serviceId);
     }
@@ -34,14 +34,18 @@ const ServiceById = () => {
     <>
       <div className="container_2001">
         <div className="ServicesbyId">
-          <h3 className="service_1">Select a Provider</h3>
+          <h3 className="service_1">Select a Service Provider</h3>
           <div className="serviceContainer">
             {artisans &&
               artisans.map((item) => {
                 return (
                   <div key={item._id} className="main_item_container">
-                    <div>
-                      <img src={proifilepicture} alt="" className="card-image" />
+                    <div className="pressure">
+                      <img
+                        src={proifilepicture}
+                        alt=""
+                        className="card-image"
+                      />
                     </div>
 
                     <div className="card-content">
@@ -54,11 +58,10 @@ const ServiceById = () => {
                       <div className="item_actions">
                         <button className="action_items">View Profile</button>
                       </div>
-                        <Link to={`/booking/${item._id}`}>
-                          <button className="dasbtn_1">HIRE ME</button>
-                        </Link>
-                      <div>
-                      </div>
+                      <Link to={`/booking/${item._id}`}>
+                        <button className="dasbtn_1">HIRE ME</button>
+                      </Link>
+                      <div></div>
                     </div>
                   </div>
                 );

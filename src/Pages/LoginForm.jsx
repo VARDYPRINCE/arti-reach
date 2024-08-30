@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import mylogo from "../assets/images/Frame352.png";
 import Reg_img1 from "../assets/images/Helmet.png";
 import Reg_img2 from "../assets/images/Login.png";
-import { useDispatch } from "react-redux";
 import "../styles/auth.css";
 
 const LoginForm = () => {
@@ -15,7 +14,7 @@ const LoginForm = () => {
   const [error, setError] = useState("");
   const [response, setResponse] = useState(null);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;

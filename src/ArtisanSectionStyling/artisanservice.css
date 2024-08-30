@@ -1,0 +1,93 @@
+.service-records {
+  /* width: 80%; */
+  /* margin: 20px auto; */
+  font-family: "lato";
+  /* border: 1px solid red;  */
+  padding: 50px 90px;
+}
+
+.records_service {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.status-started {
+  color: white;
+  background-color: #4caf50;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status-cancel {
+  color: white;
+  background-color: #f44336;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.bored {
+  border-bottom: 2px solid #ddd;
+}
+.bored_1 {
+  /* border: 1px solid red; */
+  background-color: transparent;
+  padding: 6px;
+  border-radius: 30px;
+  font-family: "lato";
+  border: blue 1px solid;
+}
+
+
+/* ------------------  */
+
+
+.button-group {
+  /* margin: 20px 0; */
+}
+
+.button-group button {
+  padding: 10px 20px;
+  /* margin-right: 10px; */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+.button-group button a {
+  color: white;
+  text-decoration: none;
+}
+
+.button-group button a:hover {
+  text-decoration: underline;
+}
+

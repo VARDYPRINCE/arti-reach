@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "../styles/rating.css";
-import DashboardNavBar from "./DashboardNavBar";
-import ServiceModal from "./ServiceModal";
 
 const Ratings = () => {
   const [rating, setRating] = useState(null);
@@ -22,7 +20,7 @@ const Ratings = () => {
               style={{ display: "none" }} // Hide radio inputs visually
             />
             <FaStar
-              size={30}
+              size={20}
               className="star"
               color={starRating <= rating ? "yellow" : "grey"}
             />

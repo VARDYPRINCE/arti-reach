@@ -1,4 +1,4 @@
-.sm_2 {
+.sm_22 {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +26,11 @@
 .sm_23 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
 }
 
 /* Message style */
@@ -134,7 +139,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .success-modal-content {
