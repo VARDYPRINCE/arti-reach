@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.login-container {
+  display: grid;
+  grid-template-columns: 40% 60%; /* Two equal columns */
+  height: 100vh; /* Full viewport height */
+  gap: 0; /* No gap between grid items */
+  background-color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.Login_image_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #023974c4;
+  border-radius: 5px 0 0 5px;
+}
+
+.img11 {
+  width: 220px;
+  height: 230px;
+  margin: 25px;
+  margin-left: 140px;
+}
+
+.img22 {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 25px;
+  margin-top: 150px;
+  margin-left: 140px;
+}
+
+.login-form {
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  height: 100hvpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 5px 5px 0;
+  padding: 40px;
+}
+
+.logo {
+  width: 300px;
+  padding-bottom: 10px;
+}
+
+.form-group15 {
+  margin-bottom: 15px;
+}
+
+.form-group15 label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 6px;
+}
+
+.form-group15 input {
+  width: 75%;
+  padding: 8px;
+  height: 55px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  padding-right: 100px;
+  width: 75%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 200px; /* Adjust according to your needs */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: black; /* Adjust color if needed */
+}
+
+.eye-icon svg {
+  font-size: 20px; /* Adjust size according to your design */
+}
+
+.form-group input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding-bottom: 12px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  background-color: #1056a0;
+  color: white;
+  border: none;
+  height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2%;
+  font-size: large;
+  width: 75%;
+  /* margin-left: 5px; */
+}
+
+.submit-button:hover {
+  background-color: #023974c4;
+}
+
+.google_bttn {
+  width: 75%;
+  height: 45px;
+  border: 2px solid #1056a0;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google_bttn a {
+  text-decoration: none;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 15px;
+}

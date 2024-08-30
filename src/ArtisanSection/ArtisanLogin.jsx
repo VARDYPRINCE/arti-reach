@@ -45,6 +45,9 @@ const ArtisanLogin = () => {
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
       try {
+        // Special case for admin credentials
+
+        // Regular login process
         const res = await axios.post(
           "https://artireach.onrender.com/api/v1/user/login",
           {
@@ -54,17 +57,36 @@ const ArtisanLogin = () => {
         );
         setFormSubmitted(true);
         console.log(res.data);
+        console.log(res.data.data.role);
 
         // Save user data to localStorage
         localStorage.setItem("user", JSON.stringify(res.data.data));
         localStorage.setItem("myToken", JSON.stringify(res.data.myToken));
-
         // Check onboarding status
-        const onboardingCompleted = localStorage.getItem("onboardingCompleted");
-        if (onboardingCompleted === "true") {
-          navigate("/artisandashboard"); // Redirect to dashboard if onboarding is complete
-        } else {
-          navigate("/onboarding"); // Redirect to onboarding if not completed
+        // const onboardingCompleted = localStorage.getItem("onboardingCompleted");
+        // if (onboardingCompleted === "true") {
+        //   navigate("/artisandashboard"); // Redirect to dashboard if onboarding is complete
+        // } else {
+        //   navigate("/onboarding"); // Redirect to onboarding if not completed
+        // }
+        if (res.data.data.role === "admin") {
+          navigate("/admindashboard");
+        }
+        if (
+          res.data.data.role === "artisan" &&
+          res.data.data.isProfileUpdated
+        ) {
+          navigate("/artisandashboard");
+        }
+        if (
+          res.data.data.role === "artisan" &&
+          res.data.data.isProfileUpdated === false
+        ) {
+          navigate("/onboarding");
+        }
+
+        if (res.data.data.role === "client") {
+          navigate("/dashboard");
         }
       } catch (error) {
         console.error("Login error:", error);

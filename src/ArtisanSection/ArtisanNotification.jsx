@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../ArtisanSectionStyling/artisannotification.css";
 import vector from "../assets/images/Vector (3).png";
@@ -114,5 +114,3 @@ const ArtisanNotification = () => {
 };
 
 export default ArtisanNotification;
-
-
