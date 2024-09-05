@@ -1,10 +1,9 @@
 import "./App.css";
+import React from "react";
 import RegistrationForm from "./Pages/RegistrationForm";
-// import LoginForm from "./Pages/LoginForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Pages/Main";
 import Home from "./Pages/Home";
-import React from "react";
 import HireNow from "./components/HireNow";
 import ServiceInformation from "./components/ServiceInformation";
 import DashboardNavBar from "./components/DashboardNavBar";
@@ -26,8 +25,10 @@ import ArtisanSection from "./Admin/BothSections/ArtisanSection";
 import ClientSection from "./Admin/BothSections/ClientSection";
 import Service from "./Admin/Service";
 import AdminProfile from "./Admin/AdminProfile";
-import AdminDashboradLayaout from "./AdminDashboradLayaout";
 import ClientService from "./components/ClientService";
+import BookingClients from "./components/BookingClients";
+import PaymentSection from "./components/PaymentSection";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -36,8 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/register" element={<RegistrationForm />} />
-          {/* <Route path="/login" element={<LoginForm />} /> */}
-          <Route path="/login" element={ <ArtisanLogin /> } />
+          <Route path="/login" element={<ArtisanLogin />} />
           <Route path="/hireNow" element={<HireNow />} />
 
           <Route path="/" element={<Layout />}>
@@ -51,6 +51,9 @@ function App() {
             <Route path="/artisans/:serviceId" element={<ServiceById />} />
             <Route path="/success" element={<BookingSuccessPage />} />
             <Route path="/serviceforclients" element={<ClientService />} />
+            <Route path="/clientbooking" element={<BookingClients />} />
+            <Route path="/payments" element={<PaymentSection />} />
+            <Route path="/artisan/profile/:artisanId" element={<Profile />} />
           </Route>
 
           <Route path="/" element={<ArtisanLayouts />}>
@@ -63,21 +66,16 @@ function App() {
             <Route path="/artisanpayment" element={<ArtisanPayment />} />
           </Route>
 
-          {/* <Route path="/artisanlogin" element={<ArtisanLogin />} /> */}
           <Route path="/artisanregister" element={<ArtisanRegisterion />} />
           <Route path="/onboarding" element={<Onboarding />} />
 
-          {/* <Route path="/" element={<AdminDashboradLayaout />}>
-            <Route path="/" element={<AdminDashboradLayaout />}></Route>
-          </Route> */}
-
           <Route path="/" element={<AdminLayout />}>
             <Route path="/admindashboard" element={<AdminDashboard />} />
-            {/* <Route path="/" element={<AdminLayout />}></Route> */}
             <Route path="/allnotification" element={<Allnotification />} />
             <Route path="/adminservice" element={<Service />} />
             <Route path="/profile" element={<AdminProfile />} />
           </Route>
+
           <Route path="/artisansection" element={<ArtisanSection />} />
           <Route path="/clientsection" element={<ClientSection />} />
         </Routes>

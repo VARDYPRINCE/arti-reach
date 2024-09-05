@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/dashboardNavBar.css";
 import { Link } from "react-router-dom";
-// import { useSelector } from "react-redux";
 import Ratings from "../components/Ratings";
 import proifilepicture from "../assets/images/Vector (3).png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const ServiceById = () => {
-  // const userName = useSelector((store) => store.user.email);
+  const [searchTerm, setSearchTerm] = useState("");
   const [artisans, setArtisans] = useState([]);
   const { serviceId } = useParams();
 
@@ -23,21 +24,42 @@ const ServiceById = () => {
       console.error("Error fetching data", error.message);
     }
   };
-  //artireach.onrender.com/api/v1/users/66b4f84521a1bdf62b7db9a4  https:
   useEffect(() => {
     if (serviceId) {
       fetchArtsansByIdData(serviceId);
     }
   }, [serviceId]);
 
+  const handleSearchOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredServices = artisans?.filter((service) =>
+    service.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
       <div className="container_2001">
         <div className="ServicesbyId">
-          <h3 className="service_1">Select a Service Provider</h3>
+          <div className="updated_new">
+            <div className="service_1">Select a Service Provider</div>
+            <div className="input-wrapper_1">
+              <input
+                type="text"
+                placeholder="Search"
+                className="input"
+                value={searchTerm}
+                onChange={handleSearchOnChange}
+              />
+              <button type="submit" className="btu">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </div>
+          </div>
           <div className="serviceContainer">
             {artisans &&
-              artisans.map((item) => {
+              filteredServices.map((item) => {
                 return (
                   <div key={item._id} className="main_item_container">
                     <div className="pressure">
@@ -52,12 +74,9 @@ const ServiceById = () => {
                       {/* <h3>Carpentry Service</h3> */}
                       <p className="item-description">{item.bio}</p>
                       <div className="item-name">{item.name}</div>{" "}
-                      <div className="item-ratings">
-                        <Ratings />
-                      </div>
-                      <div className="item_actions">
+                      <Link to={`/artisan/profile/${item._id}`}>
                         <button className="action_items">View Profile</button>
-                      </div>
+                      </Link>
                       <Link to={`/booking/${item._id}`}>
                         <button className="dasbtn_1">HIRE ME</button>
                       </Link>
@@ -74,3 +93,8 @@ const ServiceById = () => {
 };
 
 export default ServiceById;
+
+{
+  /* <div className="item_actions">
+              </div> */
+}

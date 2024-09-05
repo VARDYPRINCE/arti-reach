@@ -7,9 +7,15 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; // Import the ic
 import Reg_img1 from "../assets/images/Group 86.png";
 import Reg_img2 from "../assets/images/Group 87.png";
 import { FaGoogle } from "react-icons/fa6";
+import { useDispatch } from "react-redux";
+import {setToken, setUser } from "../store/slice/authSlice"
 
 const ArtisanLogin = () => {
   const navigate = useNavigate(); // Hook to navigate
+  const dispatch = useDispatch ();
+  
+
+
 
   const [formData, setFormData] = useState({
     email: "",
@@ -56,19 +62,14 @@ const ArtisanLogin = () => {
           }
         );
         setFormSubmitted(true);
+        dispatch(setUser(res.data.data));
+        dispatch(setToken(res.data.myToken));
         console.log(res.data);
         console.log(res.data.data.role);
-
+        
         // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(res.data.data));
-        localStorage.setItem("myToken", JSON.stringify(res.data.myToken));
-        // Check onboarding status
-        // const onboardingCompleted = localStorage.getItem("onboardingCompleted");
-        // if (onboardingCompleted === "true") {
-        //   navigate("/artisandashboard"); // Redirect to dashboard if onboarding is complete
-        // } else {
-        //   navigate("/onboarding"); // Redirect to onboarding if not completed
-        // }
+        // localStorage.setItem("user", JSON.stringify(res.data.data));
+        // localStorage.setItem("myToken", JSON.stringify(res.data.myToken));
         if (res.data.data.role === "admin") {
           navigate("/admindashboard");
         }

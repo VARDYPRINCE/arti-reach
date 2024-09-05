@@ -8,7 +8,8 @@
   justify-content: center;
   background-color:purple;
   color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
   padding: 10px 10px;
 }
 .pending_btn:hover {
@@ -35,6 +36,15 @@
 .btn_com {
   background-color: #f2f2f2; /* Light Grey */
   color: #333;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 83px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid green;
 }
 
 .btn_div_btn{

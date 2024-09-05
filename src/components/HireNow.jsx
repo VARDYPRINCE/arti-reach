@@ -7,6 +7,3 @@ const HireNow = () => {
 };
 
 export default HireNow;
-{
-  /* <Ratings /> */
-}

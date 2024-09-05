@@ -1,38 +1,32 @@
-/* App.css */
 .grid-container {
   display: grid;
-  grid-template-columns: 280px 1fr; /* Two equal-width columns */
+  grid-template-columns: 280px 1fr; 
   height: 100vh;
 }
 
 .left-pane {
-  background-color: #ffffff; /* Light grey background for the left pane */
-  padding: 20px; /* Add some padding */
+  background-color: #ffffff; 
+  padding: 20px; 
 }
 
 .right-pane {
-  /* padding: 20px; */
   background-color: #f6f6f6;
-  /* background-color: #08457e; */
 }
-.artisan_2 {
-  width: 200px;
-  margin-left: 20px;
+.artisan_33 {
+  padding-left: 22px;
+  padding-bottom: 20px;
 }
 .artisan_2_container {
-  /* border: 1px solid red; */
   padding-bottom: 30px;
   padding-top: 14px;
 }
 .artisan_icons {
-  /* border: 1px solid red; */
   margin-left: 20px;
   padding-bottom: 40px;
   display: flex;
   gap: 10px;
 }
 .input-wrapper_art {
-  /* background-color: red; */
   background-color: white;
   width: 280px;
   height: 10px;
@@ -41,8 +35,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-  /* border: 1px solid black; */
 }
 .artisan_btu {
   border: none;
@@ -53,13 +45,9 @@
   color: black;
 }
 .artisan {
-  /* border: 1px solid red; */
-  /* display: flex; */
-  /* justify-content: space-between; */
   align-items: center;
   padding: 28px 45px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-  /* background-color: #a4a5a6; */
   background-color: #08457e;
   height: 100px;
 }
@@ -67,14 +55,12 @@
   display: flex;
   border: 1px solid red;
   margin-right: 40px;
-  /* align-items: center; */
 }
 .pa {
   display: flex;
   gap: 10px;
 }
 .profileArtisans {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: flex-end;
 }
@@ -122,9 +108,6 @@
   font-weight: 500;
   color: #9d9d9d;
 }
-
-/* ArtisanSectionStyling/artisanlayout.css */
-
 /* Styles for the sidebar links */
 .nav-link {
   color: #333;
@@ -136,21 +119,16 @@
   transition: color 0.3s, background-color 0.3s;
   border-radius: 4px;
 }
-
 /* Styles for active link */
 .nav-link.active {
   background-color: #08457e;
   color: #ffffff;
   font-weight: bold;
 }
-
-/* Styles for hover effect on links */
 .nav-link:hover {
   background-color: #f0f0f0;
   color: #007bff;
 }
-
-/* Styling for icons in the sidebar */
 .artisan_icons {
   display: flex;
   align-items: center;
@@ -158,10 +136,6 @@
 }
 
 .icon_ {
-  /* color: #007bff; */
   font-size: 20px;
   margin-right: 10px;
 }
-
-
-

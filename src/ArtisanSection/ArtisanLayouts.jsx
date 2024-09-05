@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../ArtisanSectionStyling/artisanlayout.css";
-import logoArtisan from "../assets/images/arti-reach logo.png";
+import logoArtisan from "../assets/images/Do.png";
 import profileIcon from "../assets/images/account_circle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,19 +12,26 @@ import {
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import Notification from "../notifications/Notification";
+import { useSelector } from "react-redux";
 
 const ArtisanLayouts = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
+  const userData = useSelector((state) => state.user);
+  const token = useSelector((state) => state.user.token);
+
   useEffect(() => {
-    const userData = localStorage.getItem("user");
     if (userData) {
-      setUser(JSON.parse(userData));
+      setUser(userData.user);
     } else {
       navigate("/login");
     }
-  }, [navigate]);
+  }, [userData]);
+
+  console.log(userData);
+  console.log(token);
+  
 
   return (
     <>
@@ -35,7 +42,7 @@ const ArtisanLayouts = () => {
               <img
                 src={logoArtisan}
                 alt="Arti-Reach Logo"
-                className="artisan_2"
+                className="artisan_33"
               />
             </h1>
             <div className="artisan_icons">

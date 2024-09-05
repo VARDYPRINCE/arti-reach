@@ -1,0 +1,120 @@
+.art-profile {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.profile_color_container {
+  padding: 0px 20px;
+  margin-top: 20px;
+}
+
+.color_profile {
+  /* width: 1065px; */
+  height: 237.06px;
+  /* gap: 0px; */
+  border-radius: 10px;
+  background: #08457e;
+  /* display: flex; */
+}
+.color_profile_img {
+  position: absolute;
+  bottom: 48%;
+  right: 57%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.color_profile_img_picture {
+  width: 120%;
+}
+.white_data {
+  font-family: "Lato";
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  /* border: 1px solid red; */
+  margin-bottom: 20px;
+}
+.dope_profile {
+  margin-top: 40px;
+}
+.dope_profile_2 {
+  /* border: 1px solid red; */
+  padding-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.spanned {
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+}
+
+.ratingsfromcustomers{
+    border: 1px solid red;
+}
+
+/* ---------------   */
+
+.review_cards_container {
+    flex-direction: column;
+    gap: 16px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: box-shadow 0.3s ease;
+    width: 200px;
+    min-width: 200px;
+    max-width: 250px;
+  }
+  
+  .review-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .review-card-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .review-client-name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .review-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-rating,
+  .review-comment {
+    margin-bottom: 8px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #333;
+  }
+  #profile_search{
+    /* border: 1px solid red; */
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }

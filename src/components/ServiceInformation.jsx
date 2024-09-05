@@ -7,9 +7,7 @@ const ServiceInformation = () => {
   const { artisanId } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [bookingData, setBookingData] = useState({
-    // userId: ,
     date: "",
-    // time: '',
     taskName: "",
     taskDescription: "",
     location: "",

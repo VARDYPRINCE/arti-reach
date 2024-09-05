@@ -4,20 +4,35 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../ArtisanSectionStyling/artimodal.css";
 import SuccessModal from "./SuccessModal";
+import { useSelector } from "react-redux";
 
 const ArtiModal = ({ isOpen, onClose, jobId }) => {
-  const [token, setMytoken] = useState(null);
+  // const [token, setMytoken] = useState(null);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Retrieve user data from localStorage
-    const mytoken = localStorage.getItem("myToken");
+  // useEffect(() => {
+  //   // Retrieve user data from localStorage
+  //   const mytoken = localStorage.getItem("myToken");
 
-    if (mytoken) {
-      setMytoken(JSON.parse(mytoken));
+  //   if (mytoken) {
+  //     setMytoken(JSON.parse(mytoken));
+  //   } else {
+  //     // Handle case where there is no user data (e.g., redirect to login)
+  //     navigate("/login");
+  //   }
+  // }, [navigate]);
+
+  const userData = useSelector((state) => state.user);
+  const token = useSelector((state) => state.user.token);
+  console.log(userData);
+
+  useEffect(() => {
+    if (userData) {
+      // setUser(JSON.parse(userData));
+      setUser(userData.user)
     } else {
-      // Handle case where there is no user data (e.g., redirect to login)
       navigate("/login");
     }
   }, [navigate]);
