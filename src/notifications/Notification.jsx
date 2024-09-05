@@ -3,44 +3,60 @@ import { FaBell, FaTimes } from 'react-icons/fa'; // Import FaTimes for the clea
 import '../notifications/notification.css'; // Import your CSS file
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const NotificationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 //   const [ setLoading] = useState(true);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
   const [data, setData] = useState([]);
 
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const fetchUserData = () => {
+  //     const storedToken = localStorage.getItem("myToken");
+  //     const storedUser = localStorage.getItem("user");
+
+  //     if (storedToken && storedUser) {
+  //       setToken(JSON.parse(storedToken));
+  //       setUser(JSON.parse(storedUser));
+  //     } else {
+  //       navigate("/login");
+  //     }
+  //   };
+
+  //   fetchUserData();
+  // }, [navigate]);
+
+  // useEffect(() => {
+  //   // Retrieve user data from localStorage
+  //   const userData = localStorage.getItem("user");
+
+  //   if (userData) {
+  //     setUser(JSON.parse(userData));
+  //   } else {
+  //     // Handle case where there is no user data (e.g., redirect to login)
+  //     navigate("/login");
+  //   }
+  // }, []);
   const navigate = useNavigate();
 
+  const userData = useSelector((state) => state.user);
+  const token = useSelector((state) => state.token);
+  console.log(userData);
+
   useEffect(() => {
-    const fetchUserData = () => {
-      const storedToken = localStorage.getItem("myToken");
-      const storedUser = localStorage.getItem("user");
-
-      if (storedToken && storedUser) {
-        setToken(JSON.parse(storedToken));
-        setUser(JSON.parse(storedUser));
-      } else {
-        navigate("/login");
-      }
-    };
-
-    fetchUserData();
+    if (userData) {
+      // setUser(JSON.parse(userData));
+      setUser(userData.user)
+    } else {
+      // navigate("/login");
+    }
   }, [navigate]);
 
-  useEffect(() => {
-    // Retrieve user data from localStorage
-    const userData = localStorage.getItem("user");
-
-    if (userData) {
-      setUser(JSON.parse(userData));
-    } else {
-      // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/login");
-    }
-  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +64,8 @@ const NotificationBar = () => {
       if (!notificationsCleared && user && token) {
         try {
           const res = await axios.get(
-            `https://artireach.onrender.com/api/v1/job/jobs/${user._id}?status=accepted`,
+            // `https://artireach.onrender.com/api/v1/job/jobs/${user._id}?status=accepted`,
+            `https://artireach.onrender.com/api/v1/job/jobs/${user._id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,

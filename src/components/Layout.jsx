@@ -12,32 +12,32 @@ import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import Notification from "../notifications/Notification";
+import { useSelector } from "react-redux";
 
 const Layout = () => {
   const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
 
+  const userData = useSelector((state) => state.user);
+  console.log(userData);
+
   useEffect(() => {
-    // Retrieve user data from localStorage
-    const userData = localStorage.getItem("user");
-
     if (userData) {
-      setUser(JSON.parse(userData));
+      // setUser(JSON.parse(userData));
+      setUser(userData.user)
     } else {
-      // Handle case where there is no user data (e.g., redirect to login)
-      navigate("/login");
+      // navigate("/login");
     }
-  }, []); //
+  }, [navigate]);
 
-  // ---
-  // console.log(user);
+ 
   return (
     <div>
       <div className="container">
         <div className="left">
           <div className="sidebar">
-            <div>
+            <div className="dope_img_side">
               <img src={logo_3} alt="" className="artisan_3" />
             </div>
             <div className="letssee">
@@ -82,7 +82,7 @@ const Layout = () => {
               {" "}
               {/* <FontAwesomeIcon icon={faCalendar} className="icon_22" /> */}
               <NavLink
-                to="/bookingss"
+                to="/clientbooking"
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
@@ -91,7 +91,7 @@ const Layout = () => {
                 Bookings
               </NavLink>
             </div>
-            <div className="letssee">
+            <div className="paymentsection">
               {/* <FontAwesomeIcon icon={faCreditCard} className="icon_22" /> */}
               <NavLink
                 to="/payments"

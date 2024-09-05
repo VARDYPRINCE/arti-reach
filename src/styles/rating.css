@@ -5,3 +5,20 @@ input[type="radio"]{
     cursor:pointer;
     transition: color 200ms ease-in-out;
 }
+
+/* starRating.css */
+.star-rating {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc; /* Light gray color for unfilled stars */
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #f39c12; /* Gold color for filled stars */
+  }
+  

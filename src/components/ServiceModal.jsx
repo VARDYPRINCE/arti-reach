@@ -2,23 +2,35 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/modal.css';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
+import { useSelector } from "react-redux";
 
 const ServiceModal = ({ isOpen, onClose, bookingData, artisanId }) => {
-  const [token, setMytoken] = useState(null);
+  // const [token, setMytoken] = useState(null);
   const navigate = useNavigate();
+  // const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    // Retrieve user data from localStorage
-    const mytoken = localStorage.getItem("myToken");
+  // useEffect(() => {
+  //   // Retrieve user data from localStorage
+  //   const mytoken = localStorage.getItem("myToken");
 
-    if (mytoken) {
-      setMytoken(JSON.parse(mytoken));
-    } else {
-      // Handle case where there is no user data (redirect to login)
-      navigate("/login");
-    }
-  }, []);
+  //   if (mytoken) {
+  //     setMytoken(JSON.parse(mytoken));
+  //   } else {
+  //     // Handle case where there is no user data (redirect to login)
+  //     navigate("/login");
+  //   }
+  // }, []);
+
+  // const navigate = useNavigate();
+
+  const userData = useSelector((state) => state.user);
+  const token = useSelector((state) => state.user.token);
+  // console.log(userData);
+  console.log(token);
+  
+
+
 
   const handleConfirm = async () => {
     try {
