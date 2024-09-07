@@ -7,18 +7,24 @@ import star from "../assets/images/Frame 504.png";
 import "../styles/landPage.css";
 import { Link } from "react-router-dom";
 import logo2 from "../assets/images/Frame352.png";
+import { useState } from "react";
 // import icons3 from "../assets/images/Iconstel.png";
 
 const LandingPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
   return (
     <>
-      <div className="update_1">
-        {/* <div>Emergency Response Service</div>
-        <div>In case of an emergency, call this line </div>
-        <div className="update_2"><img src={icons3} alt="" />09137274377</div> */}
-      </div>
+      <div className="update_1"></div>
       <div className="view">
-        <div className="nav_bar">
+        {/* <div className="nav_bar">
           {" "}
           <img src={logo2} alt="App Logo" className="logo_1" />
           <div className="nav">
@@ -28,13 +34,54 @@ const LandingPage = () => {
             <a href="#review">Review</a>
             <a href="#contactUs">Contacts</a>
           </div>
-          <div className="button">
+          <div className="buttonnn">
             <Link to="/register">
               <button className="btn_1">Sign Up</button>
             </Link>
             <Link to="/login" className="link_transparent">
               <button className="btnx1">Log In</button>
             </Link>
+          </div>
+        </div> */}
+
+        <div className="nav_bar">
+          <img src={logo2} alt="App Logo" className="logo_1" />
+          <div className="nav">
+            <a href="#aboutUs">About</a>
+            <a href="#service">Services</a>
+            <a href="#booking">Booking</a>
+            <a href="#review">Review</a>
+            <a href="#contactUs">Contacts</a>
+          </div>
+          <div className="buttonnn">
+            <Link to="/register">
+              <button className="btn_1">Sign Up</button>
+            </Link>
+            <Link to="/login" className="link_transparent">
+              <button className="btnx1">Log In</button>
+            </Link>
+          </div>
+          <div className="hamburger-menu" onClick={toggleMenu}>
+            <div className="menu-icon">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
+            {isOpen && (
+              <div className="menu-content">
+                <a href="#aboutUs">About</a>
+                <a href="#service">Services</a>
+                <a href="#booking">Booking</a>
+                <a href="#review">Review</a>
+                <a href="#contactUs">Contacts</a>
+                <Link to="/register">
+                  <button className="btn_1">Sign Up</button>
+                </Link>
+                <Link to="/login" className="link_transparent">
+                  <button className="btnx1">Log In</button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className="main2">
@@ -55,15 +102,16 @@ const LandingPage = () => {
               <span className="artisan_1"> Trusted and Relaible </span>Artisan{" "}
               Services.
             </h1>
-            <p className="statement">
+            <div className="statement">
               Get access to reliable and top notch professional services across
               the entire city, we are about innovative transformation of
               buisness ensuring convenience for our clients.
-            </p>
+            </div>
 
             <div className="button1">
-              <button className="btn_2">Hire Service</button>
-              {/* <button className="btn_3">View Services</button> */}
+              <Link to="/login">
+                <button className="btn_2">Hire Service</button>
+              </Link>
             </div>
           </div>
           <img

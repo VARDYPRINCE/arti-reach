@@ -71,3 +71,21 @@
 .fa_4{
   cursor: pointer;
 }
+
+@media (max-width:1024px){
+  .faq-answer{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 0px;
+  }
+}
+
+@media (max-width:426px){
+  .fa_6{
+    padding-bottom: 10px;
+  }
+
+  .faqcon {
+    padding: 10px 20px;
+  }
+} 

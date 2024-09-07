@@ -6,13 +6,12 @@ const AboutUs = () => {
     <div className="pad">
       <div className="mainView">
         <div className="contentz">
-          <h3 className="aboutUs" id="aboutUs">
+          <div className="aboutUs" id="aboutUs">
             About Us
-          </h3>
-          <div>
-            <h1 className="heading">
-              Book Services from the comfort of
-              your Home.
+          </div>
+          <div className="yty">
+            <h1 className="heading1">
+              Book Services from the comfort of your Home.
             </h1>
             <p className="statement_1">
               Some studies have shown that most people find it difficult to find
@@ -21,14 +20,18 @@ const AboutUs = () => {
               people have access to artisan services from the comfort of their
               homes encouraging a new path to business transaction.
             </p>
+            <div className="_p2">
+              <button className="readmore">Read More</button>
+            </div>
           </div>
-          <button className="readmore">Read More</button>
         </div>
-        <img
-          src={couples}
-          alt="couples making plan using a tablet"
-          className="picturess"
-        />
+        <div className="hkgvbhj">
+          <img
+            src={couples}
+            alt="couples making plan using a tablet"
+            className="picturess"
+          />
+        </div>
       </div>
     </div>
   );

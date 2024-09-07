@@ -19,67 +19,36 @@
 //   });
 //   const [loading, setLoading] = useState(false);
 //   const [myServices, setMyServices] = useState([]);
-//   const [user, setUser] = useState(null);
-//   // const [token, setMytoken] = useState(null);
 //   const [errors, setErrors] = useState({});
 //   const navigate = useNavigate();
-//   const { timeStart, timeEnd, ...dataToSend } = formData;
-
-//   // useEffect(() => {
-//   //   const mytoken = localStorage.getItem("myToken");
-//   //   if (mytoken) {
-//   //     setMytoken(JSON.parse(mytoken));
-//   //   } else {
-//   //     navigate("/login");
-//   //   }
-//   // }, [navigate]);
-
-//   // useEffect(() => {
-//   //   const userData = localStorage.getItem("user");
-//   //   if (userData) {
-//   //     setUser(JSON.parse(userData));
-//   //   } else {
-//   //     navigate("/login");
-//   //   }
-//   // }, [navigate]);
-
-//   // useEffect(() => {
-//   //   const onboardingCompleted = localStorage.getItem("onboardingCompleted");
-//   //   if (onboardingCompleted === "true") {
-//   //     navigate("/artisandashboard");
-//   //   }
-//   // }, [navigate]);
-
-//   // const navigate = useNavigate();
-
 //   const userData = useSelector((state) => state.user);
 //   const token = useSelector((state) => state.user.token);
-//   console.log(userData);
 
 //   useEffect(() => {
-//     if (userData) {
-//       // setUser(JSON.parse(userData));
-//       setUser(userData.user);
-//     } else {
-//       // navigate("/login");
+//     if (!userData) {
+//       navigate("/login");
+//       return;
 //     }
-//   }, [navigate]);
-
-//   const fetchData = async () => {
-//     setLoading(true);
-//     try {
-//       const res = await axios.get(
-//         "https://artireach.onrender.com/api/v1/service/",
-//       );
-//       setMyServices(res.data.services);
-//       setLoading(false);
-//     } catch (error) {
-//       console.error("Error fetching data", error.message);
-//       setLoading(false);
-//     }
-//   };
+//   }, [navigate, userData]);
 
 //   useEffect(() => {
+//     const fetchData = async () => {
+//       setLoading(true);
+//       try {
+//         const response = await axios.get(
+//           "https://artireach.onrender.com/api/v1/service/"
+//         );
+//         setMyServices(response.data.services);
+//       } catch (error) {
+//         console.error("Error fetching data", error.message);
+//         setErrors({
+//           fetch: "Failed to load services. Please try again later.",
+//         });
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
 //     fetchData();
 //   }, []);
 
@@ -109,12 +78,8 @@
 //     setLoading(true);
 //     try {
 //       const { timeStart, timeEnd, ...dataToSend } = formData;
-//       console.log("Form data being sent:", dataToSend);
-//       console.log("User ID:", user?._id);
-//       console.log("Token:", token);
-
 //       const response = await axios.patch(
-//         `https://artireach.onrender.com/api/v1/users/${user._id}`,
+//         `https://artireach.onrender.com/api/v1/users/${userData.user._id}`,
 //         dataToSend,
 //         {
 //           headers: {
@@ -123,25 +88,13 @@
 //           },
 //         }
 //       );
-//       console.log("Response:", response);
 //       if (response.status === 200) {
-//         // localStorage.setItem("onboardingCompleted", "true");
 //         navigate("/artisandashboard");
 //       } else {
-//         console.error("Failed to submit form");
 //         setErrors({ submit: "Failed to submit form. Please try again." });
 //       }
 //     } catch (error) {
-//       console.error("An error occurred:", error);
-//       if (error.response) {
-//         console.error("Response data:", error.response.data);
-//         console.error("Response status:", error.response.status);
-//         console.error("Response headers:", error.response.headers);
-//       } else if (error.request) {
-//         console.error("Request:", error.request);
-//       } else {
-//         console.error("Error message:", error.message);
-//       }
+//       console.error("An error occurred:", error.message);
 //       setErrors({ submit: "Failed to submit form. Please try again." });
 //     } finally {
 //       setLoading(false);
@@ -192,7 +145,7 @@
 //               className="select-a"
 //             >
 //               <option value="">Select Service</option>
-//               {myServices &&
+//               {myServices.length > 0 &&
 //                 myServices.map((service) => (
 //                   <option key={service._id} value={service._id}>
 //                     {service.name}
@@ -272,6 +225,7 @@
 
 // export default Onboarding;
 
+
 import "../ArtisanSectionStyling/onboarding.css";
 import logo from "../assets/images/arti-reach logo.png";
 import Reg_imgA from "../assets/images/Helmet (1).png";
@@ -290,6 +244,8 @@ const Onboarding = () => {
     timeEnd: "",
     address: "",
     area: "",
+    accountName: "", // New field
+    accountNumber: "", // New field
   });
   const [loading, setLoading] = useState(false);
   const [myServices, setMyServices] = useState([]);
@@ -339,6 +295,10 @@ const Onboarding = () => {
       formErrors.serviceType = "Service type is required";
     if (!formData.address.trim()) formErrors.address = "Address is required";
     if (!formData.area.trim()) formErrors.area = "Area is required";
+    if (!formData.accountName.trim())
+      formErrors.accountName = "Account name is required"; // Validation for account name
+    if (!formData.accountNumber.trim())
+      formErrors.accountNumber = "Account number is required"; // Validation for account number
     return formErrors;
   };
 
@@ -455,6 +415,32 @@ const Onboarding = () => {
               onChange={handleInputChange}
             />
             {errors.area && <span className="error">{errors.area}</span>}
+          </div>
+
+          <div className="all">
+            <label htmlFor="accountName">Account Name</label>
+            <input
+              type="text"
+              id="accountName"
+              name="accountName"
+              placeholder="Enter Account Name"
+              value={formData.accountName}
+              onChange={handleInputChange}
+            />
+            {errors.accountName && <span className="error">{errors.accountName}</span>}
+          </div>
+
+          <div className="all">
+            <label htmlFor="accountNumber">Account Number</label>
+            <input
+              type="text"
+              id="accountNumber"
+              name="accountNumber"
+              placeholder="Enter Account Number"
+              value={formData.accountNumber}
+              onChange={handleInputChange}
+            />
+            {errors.accountNumber && <span className="error">{errors.accountNumber}</span>}
           </div>
 
           <div className="all">

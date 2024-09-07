@@ -14,7 +14,7 @@ const Profile = () => {
   const fetchUserByIdData = async (artisanId) => {
     try {
       const res = await axios.get(
-        `http://artireach.onrender.com/api/v1/review/artisans/${artisanId}`
+        `https://artireach.onrender.com/api/v1/review/artisans/${artisanId}`
       );
       console.log(res.data); // Check the structure of res.data
       setArtisanData(res.data.data); // Assuming res.data.data is the array containing reviews and other data

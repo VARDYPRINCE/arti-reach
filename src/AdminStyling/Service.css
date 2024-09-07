@@ -4,7 +4,7 @@
 
 .tabbs {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .tabbs button {

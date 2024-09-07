@@ -1,7 +1,5 @@
 .ad_1 {
   padding: 30px 50px;
-.ad_1 {
-  padding: 30px 50px;
 }
 .toggle_section {
   text-align: center;
@@ -43,9 +41,9 @@ text-align: right;
 .twelvess{
   text-align: center;
 }
-.dotted_line{
+/* .dotted_line{
   text-decoration: underline;
-}
+} */
 .togs {
   display: flex;
   justify-content: flex-end;

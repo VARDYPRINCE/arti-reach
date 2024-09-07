@@ -12,46 +12,46 @@ const ForUsers = () => {
         <h3 className="book_service" id="booking">
           Booking Service
         </h3>
-        <h2 className="users_1">For Users</h2>
+        <h2 className="users_1" id="rew">For Users</h2>
       </div>
-      <div className="flex">
-        <div className="sign_div">
+      <div className="flex" id="rew">
+        <div className="sign_div" id="ttt">
           <div className="force">
             <img src={search} alt="" />
           </div>
-          <span className="statement_2">
+          <div className="statement_2">
             Search for specific domestic service you want an we"ll find a
             registered service proviers closest to you.
-          </span>
+          </div>
         </div>
 
-        <div className="line"></div>
+        {/* <div className="line"></div> */}
 
         <div className="sign_div">
-          <div className="force">
+          <div className="force" >
             <img src={contact} alt="" />
           </div>
-          <span className="statement_2">
+          <div className="statement_2">
             You picked one of the listed service providers and after they accept
             your service request you can contact them to discuss further service
             negotiations.
-          </span>
+          </div>
         </div>
 
-        <div className="line"></div>
+        {/* <div className="line"></div> */}
 
         <div className="sign_div">
-          <div className="force">
+          <div className="force" >
             <img src={bold} alt="" />
           </div>
-          <span className="statement_2">
+          <div className="statement_2">
             Your assigned service provider arrives at your location and gets the
             job request done.
-          </span>
+          </div>
         </div>
       </div>
 
-      <div className="btn_btn">
+      <div className="btn_btn" id="rew">
         <Link to="/artisanregister">
           <button className="btn_3_">Try Services</button>
         </Link>
@@ -60,37 +60,37 @@ const ForUsers = () => {
         <h2 className="users_1">For Artisans</h2>
       </div>
       <div className="flex">
-        <div className="sign_div">
+        <div className="sign_div" id="ttt">
           <div className="force">
             <img src={bag} alt="" />
           </div>
-          <span className="statement_2">
+          <div className="statement_2" id="rtr">
             Register on Arti-Reach as a service provider, then go through the
             onboarding process.
-          </span>
+          </div>
         </div>
 
-        <div className="line"></div>
+        {/* <div className="line"></div> */}
 
         <div className="sign_div">
           <div className="force">
             <img src={contact} alt="" />
           </div>
-          <span className="statement_2">
+          <div className="statement_2" id="trt">
             Arti-Reach will put you through as a certified service provider,
             users around can request your services.
-          </span>
+          </div>
         </div>
 
-        <div className="line_1"></div>
+        {/* <div className="line_1"></div> */}
 
         <div className="sign_div">
           <div className="force">
             <img src={bold} alt="" />
           </div>
-          <p className="statement_3">
+          <div className="statement_3">
             Accept user request, goes and completes tasks then get paid.
-          </p>
+          </div>
         </div>
       </div>
       <div className="btn_btn">

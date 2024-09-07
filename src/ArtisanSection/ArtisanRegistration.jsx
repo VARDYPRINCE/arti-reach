@@ -66,7 +66,13 @@ const ArtisanRegisterion = () => {
             email: formData.email,
             phoneNumber: formData.phoneNumber,
             password: formData.password,
-          }
+          }, 
+          // {
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          //   withCredentials:true,
+          // }
         );
         setFormSubmitted(true);
         console.log(res.data);

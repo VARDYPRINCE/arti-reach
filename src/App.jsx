@@ -29,6 +29,7 @@ import ClientService from "./components/ClientService";
 import BookingClients from "./components/BookingClients";
 import PaymentSection from "./components/PaymentSection";
 import Profile from "./components/Profile";
+import AdminPayment from "./Admin/AdminPayment";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
             <Route path="/allnotification" element={<Allnotification />} />
             <Route path="/adminservice" element={<Service />} />
             <Route path="/profile" element={<AdminProfile />} />
+            <Route path="/adminpayment" element={<AdminPayment />} />
           </Route>
 
           <Route path="/artisansection" element={<ArtisanSection />} />
