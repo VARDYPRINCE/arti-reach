@@ -13,7 +13,10 @@ const Footer = () => {
     <div className="name">
       <div className="footer_ptn">
         <div className="footer_logo">
+          <div  className="ftm">
+
           <img src={logo2} alt="" />
+          </div>
           <div className="motto">
             Our motto at Arti-reach is to Redefine Service bringing the sense of
             excellence and professionalism introducing an innovative means of
@@ -109,8 +112,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="div_line"></div>
+      {/* <div className="div_line"></div> */}
       <div className="copyright">
+        <div className="div_line"></div>
         &copy;{currentYear} Arti-Reach All rights reserved
       </div>
     </div>

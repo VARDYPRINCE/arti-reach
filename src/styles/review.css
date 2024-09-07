@@ -7,7 +7,8 @@
   line-height: 33.89px;
 }
 .review {
-  padding: 0px 150px;
+  /* padding: 0px 150px; */
+  padding: 20px 100px;
 }
 .fam_grid {
   padding-top: 10px;
@@ -61,4 +62,84 @@
   padding-top: 30px;
   display: flex;
   justify-content: center;
+}
+
+
+@media (max-width:1280px) {
+  .body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+}
+@media (max-width:1024px) {
+  .body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  .fam_grid{
+    flex-direction: column;
+  }
+
+  .review_box{
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .review_box img{
+    /* border: 1px solid red; */
+    width: 230px;
+    display: grid;
+   padding: 0px 10px;
+  }
+  .review_title{
+    text-align: center;
+  }
+}
+
+/* @media (max-width: 768px){
+  .review{
+    padding: 20px 50px;
+    border: 1px solid red;
+    width: 495px;
+  }
+
+  .review_box {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .photos_2 {
+    display: none;
+  }
+} */
+
+@media(max-width:426px) {
+  .photos_2{
+    display: none;
+  }
+
+  .happy_clients{
+    width: 320px;
+  }
+
+  .review {
+    /* padding: 0px 150px; */
+    padding: 20px 10px;
+  }
+
+  .happy_paragraph{
+    width: 320px;    
+  }
+
+  .review_box{
+    grid-template-columns: auto;
+  }
+
 }

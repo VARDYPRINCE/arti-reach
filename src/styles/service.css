@@ -1,6 +1,7 @@
 .pad_2 {
   /* padding: 0px 0px; */
-  padding: 0px 150px;
+  /* padding: 0px 150px; */
+  padding: 20px 100px;
   margin-top: 70px;
 }
 .about {
@@ -49,4 +50,20 @@
   background-color: #08457e;
   color: white;
   padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 426px) {
+  .grid {
+    grid-template-columns: auto;
+    /* border: 1px solid red; */
+  }
 }

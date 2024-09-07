@@ -443,3 +443,14 @@ input:focus {
   font-weight: 700;
   line-height: 30px;
 }
+
+
+/* ---------------advertisement ------------- */
+/* .advertisement {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100vh; 
+}
+.adverise_item{
+  margin-top: 10px;
+} */

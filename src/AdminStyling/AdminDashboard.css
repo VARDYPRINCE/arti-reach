@@ -9,6 +9,13 @@ h1 {
 .overview {
   font-size: 25px;
   padding-top: 20px;
+
+  font-family: Lato;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+
 }
 
 .profileArtisan1 {
@@ -62,4 +69,114 @@ h1 {
 
 .profile_name {
   color: white;
+}
+
+/* --------------------  */
+/* AdminDashboard.css */
+.charts_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+}
+.inline_donut {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 36%;
+  /* right: 10%; */
+  left: 29%;
+  text-align: center;
+}
+.records_1_3 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+}
+.records_1_4 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 10px;
+  gap: 30px;
+  /* width: 500px; */
+}
+.records_1_5 {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rec_ords {
+  /* border: 1px solid red; */
+  background-color: #cfdbe4;
+  border-radius: 10px;
+  padding: 5px;
+}
+.uest {
+  font-family: "Lato";
+  font-size: 15.67px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.req {
+  font-family: "Lato";
+  font-size: 11.76px;
+  font-weight: 400;
+}
+.inline_donut_1 {
+  font-family: "Lato";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.inline_donut_2 {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.Doughnut_container1 {
+  background-color: #093351;
+  /* background-color: #fff; */
+  height: 300px;
+  width: 600px;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.Doughnut_container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  padding: 20px 20px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.dd {
+  /* border: 1px solid red; */
+  color: white;
+}
+.admindiv_1 {
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.vv {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }

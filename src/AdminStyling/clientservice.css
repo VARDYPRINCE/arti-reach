@@ -1,0 +1,161 @@
+
+/* clientservice.css */
+
+/* Container for the client cards */
+.clientservices-container {
+    /* padding: 20px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 20px; */
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  
+  /* Card for each client */
+  .clientservices-client-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: box-shadow 0.3s;
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+  }
+  
+  /* Image inside the card */
+  .clientservices-client-item img {
+    /* width: 50px;
+    height: 50px; */
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Name of the client */
+  .clientservices-client-name {
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+  }
+  
+  /* Delete button styling */
+  .clientservices-delete-btn {
+  background-color: #fff;
+    color: #0E5ACC;
+    /* color: white; */
+    border:1px solid #0E5ACC;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+  }
+  
+  .clientservices-delete-btn:hover {
+    background-color: #0E5ACC;
+    color: white;
+  }
+  
+  /* No data text */
+  .clientservices-no-data {
+    font-style: italic;
+    color: #888;
+  }
+  
+  /* Modal overlay and content */
+  .clientservices-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clientservices-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  /* Modal title and body */
+  .clientservices-modal-title {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .clientservices-modal-body {
+    margin-bottom: 20px;
+  }
+  
+  /* Modal buttons */
+  .clientservices-modal-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .clientservices-confirm-btn {
+    /* background-color: #27ae60; */
+    background-color: red;
+    color: white;
+  }
+  
+  .clientservices-cancel-btn {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .clientservices-ok-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .clientservices-modal-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .jbghjkb{
+    /* border: 1px solid red; */
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .clientservices-delete-btn1 {
+    background-color: #fff;
+      color: #0E5ACC;
+      /* color: white; */
+      border:1px solid #0E5ACC;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      
+    }
+    
+    .clientservices-delete-btn1:hover {
+      background-color: #0E5ACC;
+      color: white;
+    }
+    
+    .services_btnal{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }

@@ -8,26 +8,28 @@ import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import { FaUser } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, NavLink } from "react-router-dom";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "../dropdown/Dropdown";
+import { useSelector } from "react-redux";
 
 const AdminLayout = () => {
   const [user, setUser] = useState(null);
-
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Retrieve user data from localStorage
-    const userData = localStorage.getItem("user");
+  const userData = useSelector((state) => state.user);
+  const token = useSelector((state) => state.user.token);
 
+  useEffect(() => {
     if (userData) {
-      setUser(JSON.parse(userData));
+      setUser(userData.user);
     } else {
-      // Handle case where there is no user data (e.g., redirect to login)
-      //   navigate("/adminlogin");
+      navigate("/login");
     }
-  }, []); //
+  }, [userData]);
+
+  console.log(userData);
+  console.log(token);
 
   return (
     <>
@@ -43,29 +45,60 @@ const AdminLayout = () => {
             </div>
 
             <div className="artisan_icons">
-              {" "}
-              <FontAwesomeIcon icon={faHouse} className="icon_" />
-              <a href="/admindashboard">Dashboard</a>
+              <NavLink
+                to="/admindashboard"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                <FontAwesomeIcon icon={faHouse} className="icon_" />
+                Dashboard
+              </NavLink>
             </div>
             <div className="artisan_icons">
-              {" "}
-              <FontAwesomeIcon icon={faBagShopping} className="icon_" />
-              <a href="/Allnotification">Notification</a>
+              <NavLink
+                to="/Allnotification"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                <FontAwesomeIcon icon={faBagShopping} className="icon_" />
+                Notification
+              </NavLink>
             </div>
 
             <div className="artisan_icons">
-              {" "}
-              <FontAwesomeIcon icon={faWrench} className="icon_" />
-              <a href="/Service">Services</a>
+              <NavLink
+                to="/Service"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                <FontAwesomeIcon icon={faWrench} className="icon_" />
+                Services
+              </NavLink>
             </div>
             <div className="artisan_icons">
-              {" "}
-              <FontAwesomeIcon icon={faUser} className="icon_" />
-              <a href="/profile">Profile</a>
+              <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                <FontAwesomeIcon icon={faUser} className="icon_" />
+                <a href="/profile">Profile</a>
+              </NavLink>
             </div>
             <div className="artisan_icons">
-              <FontAwesomeIcon icon={faCreditCard} className="icon_" />
-              <a href="/adminpayment">Payments</a>
+              <NavLink
+                to="/adminpayment"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                <FontAwesomeIcon icon={faCreditCard} className="icon_" />
+                Payments
+              </NavLink>
             </div>
           </div>
         </div>
